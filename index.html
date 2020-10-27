@@ -1,7 +1,54 @@
+<!doctype html>
 <html>
-    <head></head>
-    <body>
-        <a href="./IPFS-stats.html">IPFS swarm statistics</a>
-        <a href="./recursion-list.html">IPFS recursion graph</a>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/configuration.js"></script>
+    <script src="js/functions.js"></script>
+    <title>Giobart Portfolio</title>
+    <script>
+        $(document).ready(function () {
+            resetPage();
+            preparePage();
+        });
+        $(window).on('resize', function () {
+            //resetPage();
+            //preparePage();
+        });
+    </script>
+
+</head>
+
+<body>
+    
+        <div>
+            <span class="title">
+                <h1 id="name">aaa</h1>
+                <h3 id="brief">aaa</h1>
+            </span>
+        </div>
+
+
+
+        <span id="dot1" class="dot position3"></span>
+        <span id="dot2" class="dot position3"></span>
+        <span id="dot3" class="dot position3"></span>
+        <span id="date" class="date position3"></span>
+        <span id="description" class="description hidden"></span>
+
+        <div class="storyline">
+            <div id="line1" class="lineContainer position1">
+            </div>
+            <div id="line2" class="lineContainer position2">
+            </div>
+            <div id="line3" class="lineContainer position3">
+            </div>
+        </div>        
+    
+
+</body>
+
 </html>
