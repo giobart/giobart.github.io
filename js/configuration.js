@@ -158,7 +158,7 @@ var configuration=
         },
         {
             "name":"Erasmus @ TUM",
-            "description":"1 year Erasmus scolarship in Munich finalized into mastering Medical Applications & AI",
+            "description":"1 year Erasmus scolarship in Munich finalized into mastering Cloud, Medical applications & Deep Learning",
             "year":2020,
             "monthfrom":8,
             "monthto":12,
@@ -178,13 +178,13 @@ var configuration=
         },
         {
             "name":"Erasmus at Technical University of Munich",
-            "description":"1 year Erasmus scolarship in Munich finalized into mastering Medical Applications & AI",
+            "description":"1 year Erasmus scolarship in Munich finalized into mastering Cloud, Medical applications & Deep Learning",
             "year":2021,
             "monthfrom":1,
             "monthto":9,
             "color":"#90a4ae",
             "colorhover":"#4caf50",
-            "position":3
+            "position":2
         },
         {
             "name":"Google Developer Group Manager, Pisa",
@@ -194,17 +194,17 @@ var configuration=
             "monthto":12,
             "color":"#90a4ae",
             "colorhover":"#ff8f00",
-            "position":2
+            "position":1
         },
         {
             "name":"Enabling Microservice Interactions within Eterogeneous Edge Infrastructures",
             "description":"Master thesis at the Chair of Connected Mobility of the TUM. This work presents a set of networking components that bring flexibility in the way the communication is carried out in the Edge. The proposed approach exploits semantic IP addressing, the positioning and the hardware capabilities of the nodes hosting the microservices instances to provide a powerful traffic balancing instrument.",
             "year":2021,
-            "monthfrom":2,
+            "monthfrom":1,
             "monthto":12,
             "color":"#90a4ae",
             "colorhover":"#e53935",
-            "position":1
+            "position":3
         },
         {
             "name":"Research Assistant @ TUM",
