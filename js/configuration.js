@@ -213,13 +213,13 @@ var configuration=
             "monthfrom":1,
             "monthto":12,
             "color":"#90a4ae",
-            "colorhover":"#4caf50",
-            "position":2
+            "colorhover":"#1565c0",
+            "position":3
         },
         {
             "name":"Google Developer Group Manager, Pisa",
             "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
-            "year":2021,
+            "year":2022,
             "monthfrom":1,
             "monthto":12,
             "color":"#90a4ae",
