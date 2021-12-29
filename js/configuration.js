@@ -58,7 +58,7 @@ var configuration=
         },
         {
             "name":"Google Developer Group Manager, Pisa",
-            "description":"Community management and events organization skills. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
+            "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
             "year":2017,
             "monthfrom":4,
             "monthto":12,
@@ -88,7 +88,7 @@ var configuration=
         },
         {
             "name":"Google Developer Group Manager, Pisa",
-            "description":"Community management and events organization skills. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
+            "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
             "year":2018,
             "monthfrom":1,
             "monthto":12,
@@ -128,7 +128,7 @@ var configuration=
         },
         {
             "name":"Google Developer Group Manager, Pisa",
-            "description":"Community management and events organization skills. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
+            "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
             "year":2019,
             "monthfrom":1,
             "monthto":12,
@@ -157,7 +157,7 @@ var configuration=
             "position":3
         },
         {
-            "name":"Erasmus at TUM",
+            "name":"Erasmus @ TUM",
             "description":"1 year Erasmus scolarship in Munich finalized into mastering Medical Applications & AI",
             "year":2020,
             "monthfrom":8,
@@ -168,7 +168,7 @@ var configuration=
         },
         {
             "name":"Google Developer Group Manager, Pisa",
-            "description":"Community management and events organization skills. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
+            "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
             "year":2020,
             "monthfrom":1,
             "monthto":12,
@@ -181,45 +181,55 @@ var configuration=
             "description":"1 year Erasmus scolarship in Munich finalized into mastering Medical Applications & AI",
             "year":2021,
             "monthfrom":1,
-            "monthto":8,
+            "monthto":9,
             "color":"#90a4ae",
             "colorhover":"#4caf50",
             "position":3
         },
         {
             "name":"Google Developer Group Manager, Pisa",
-            "description":"Community management and events organization skills. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
+            "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
             "year":2021,
             "monthfrom":1,
-            "monthto":8,
+            "monthto":12,
             "color":"#90a4ae",
             "colorhover":"#ff8f00",
             "position":2
         },
         {
-            "name":"Master Thesis Work",
-            "description":"Subject TBD",
+            "name":"Enabling Microservice Interactions within Eterogeneous Edge Infrastructures",
+            "description":"Master thesis at the Chair of Connected Mobility of the TUM. This work presents a set of networking components that bring flexibility in the way the communication is carried out in the Edge. The proposed approach exploits semantic IP addressing, the positioning and the hardware capabilities of the nodes hosting the microservices instances to provide a powerful traffic balancing instrument.",
             "year":2021,
-            "monthfrom":1,
-            "monthto":8,
+            "monthfrom":2,
+            "monthto":12,
             "color":"#90a4ae",
             "colorhover":"#e53935",
             "position":1
         },
         {
-            "name":"TBD",
-            "description":"",
-            "year":2021,
-            "monthfrom":9,
+            "name":"Research Assistant @ TUM",
+            "description":"Research assistant of the chair of Connected Mobility associated with the EdgeIO Project",
+            "year":2022,
+            "monthfrom":1,
             "monthto":12,
             "color":"#90a4ae",
-            "colorhover":"#90a4ae",
-            "position":3
+            "colorhover":"#4caf50",
+            "position":2
+        },
+        {
+            "name":"Google Developer Group Manager, Pisa",
+            "description":"Community management and events organization. Organized events like Devfest, with 250+ participants. Organizer of meetups and seminars for the local community. Full list available on gdgpisa.it",
+            "year":2021,
+            "monthfrom":1,
+            "monthto":12,
+            "color":"#90a4ae",
+            "colorhover":"#ff8f00",
+            "position":2
         },
         {
             "name":"Long life and prosperity",
             "description":"IF you arrived here, I hope you enjoyed the tour :)",
-            "year":2022,
+            "year":2023,
             "monthfrom":1,
             "monthto":12,
             "color":"#90a4ae",
