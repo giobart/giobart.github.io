@@ -198,7 +198,7 @@ var configuration=
         },
         {
             "name":"Enabling Microservice Interactions within Eterogeneous Edge Infrastructures",
-            "description":"Master thesis at the Chair of Connected Mobility of the TUM. This work presents a set of networking components that bring flexibility in the way the communication is carried out in the Edge. The proposed approach exploits semantic IP addressing, the positioning and the hardware capabilities of the nodes hosting the microservices instances to provide a powerful traffic balancing instrument.",
+            "description":"(<a href='documents/md-thesis.html'>Read my thesis here</a>) Master thesis at the Chair of Connected Mobility of the TUM. This work presents a set of networking components that bring flexibility in the way the communication is carried out in the Edge. The proposed approach exploits semantic IP addressing, the positioning and the hardware capabilities of the nodes hosting the microservices instances to provide a powerful traffic balancing instrument.",
             "year":2021,
             "monthfrom":1,
             "monthto":12,

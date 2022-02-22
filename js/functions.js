@@ -224,12 +224,12 @@ function addDescriptionToStoryline(eventsArray) {
   eventsArray.forEach(function (event) {
     //update description
     var descrTitle = document.createElement('span');
-    var descrContent = document.createElement('span');
+    var descrContent = document.createElement('div');
     $("#description").addClass("visible").removeClass("hidden")
     $(descrTitle).addClass("description-title").attr("id", event.name.replace(/[!@#$%^&*,;.\s]/g, '') + "title")
     $(descrTitle).text(event.name).css("border-block-start-color", event.colorhover).appendTo($("#description"));
     $(descrContent).addClass("description-content").attr("id", event.name.replace(/[!@#$%^&*,;.\s]/g, '') + "content")
-    $(descrContent).text(event.description).css("border-block-start-color", event.colorhover).appendTo($("#description"));
+    $(descrContent).html(event.description).css("border-block-start-color", event.colorhover).appendTo($("#description"));
   })
 }
 
