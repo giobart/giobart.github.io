@@ -1,54 +1,88 @@
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giovanni Bartolomeo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
-<head>
-    <link rel="stylesheet" href="js/bootstrap.min.css">
-    <link rel="stylesheet" href="home.css">
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/configuration.js"></script>
-    <script src="js/functions.js"></script>
-    <title>Giobart Portfolio</title>
-    <script>
-        $(document).ready(function () {
-            resetPage();
-            preparePage();
-        });
-        $(window).on('resize', function () {
-            //resetPage();
-            //preparePage();
-        });
-    </script>
+    <style>
+        my-bg-primary {background-color: #243152;}
+        my-bg-secondary   {background-color: #4f779c;}
+    </style>
 
-</head>
-
-<body>
-    
-        <div>
-            <span class="title">
-                <h1 id="name">aaa</h1>
-                <h3 id="brief">aaa</h1>
-            </span>
+    </head>
+  <body> 
+    <div class="mt-4 p-5 text-white rounded-5 container", style="border-radius: 25px; background-color: #4f779c;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3  ms-md-auto">
+                    <div class="container">
+                        <img src="img/pic.png" class="rounded float-start" width="100%">
+                    </div>
+                </div>
+                <div class="col-md-9  ms-md-auto d-flex align-items-center">
+                        <div class="p-2">
+                            <h1 class="display-4">Giovanni Bartolomeo, M.Sc.</h1>  
+                            <div class="container text-white">
+                                <a href="https://www.facebook.com/giobarty" style="color: white; text-decoration: none" class="fa fa-facebook display-6"></a>
+                                <a href="https://mobile.twitter.com/giobarty01" style="color: white; text-decoration: none" class="fa fa-twitter display-6"></a>
+                                <a href="https://www.linkedin.com/in/giobart" style="color: white; text-decoration: none" class="fa fa-linkedin-in display-6"></a>
+                                <a href="https://t.me/gi0bart" style="color: white; text-decoration: none" class="fa fa-telegram display-6"></a>
+                                <a href="https://github.com/giobart" style="color: white; text-decoration: none" class="fa fa-github display-6"></a>
+                                <a href="mailto:giovanni.bartolomeo@tum.de" style="color: white; text-decoration: none" class="fa fa-envelope display-6"></a>
+                            </div>
+                            <br><br>
+                            <div class="container">
+                                <b>Researcher and Ph.D. student</b> @ Technical University of Munich, Chair of Connected Mobility <br>
+                                <b>Community Lead</b> @ Google Developer Group Pisa <br>
+                            </div>
+                        </div> 
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                
+            </div>
         </div>
+        <br>
 
+        
+    </div>
 
+    <div class="container", style="">
+        <hr class="">
+        <h1 class="display-6">Office hours</h1> 
+        <p>Fakultät für Informatik <br>
+        Boltzmannstraße 3, 85748 Garching bei München <br>
+        Office: 01.05.061 <br>
+        Mon-Fri 9.00 - 18.00 <br>
+    </div>
 
-        <span id="dot1" class="dot position3"></span>
-        <span id="dot2" class="dot position3"></span>
-        <span id="dot3" class="dot position3"></span>
-        <span id="date" class="date position3"></span>
-        <span id="description" class="description hidden"></span>
+    <div class="container", style="">
+        <hr class="">
+        <h1 class="display-6">Research Interests</h1> 
+        <ul class="">
+            <li class="">Edge service orchestration</li>
+            <li class="">Microservices networking</li>
+            <li class="">5G and beyond</li>
 
-        <div class="storyline">
-            <div id="line1" class="lineContainer position1">
-            </div>
-            <div id="line2" class="lineContainer position2">
-            </div>
-            <div id="line3" class="lineContainer position3">
-            </div>
-        </div>        
-    
+        </ul>
+    </div>
+
+    <div class="container", style="">
+        <hr class="">
+        <h1 class="display-6">Latest Projects</h1> 
+        <ul class="">
+            <li class="">Oakestra: A lightweigth service orchestration framework for edge computing</li>
+            <li class="">OakestraNet: Microservice networking plugin for semantic traffic routing</li>
+            <li class="">Who's that pokemon: Web login system based on facial recognition</li>
+            <li class="">EtherCrowdfunding: Ethereum DAPP for a crowdfunding platform </li>
+        </ul>
+    </div>
 
 </body>
-
 </html>
