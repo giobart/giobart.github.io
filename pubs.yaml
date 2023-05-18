@@ -1,0 +1,45 @@
+- title: 'Oakestra: A Lightweight Hierarchical Orchestration Framework for Edge Computing'
+  author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
+  publication_date: 07/2023
+  journal_title: USENIX Annual Technical Conference
+  firstpage: '-'
+  lastpage: 'TBD--'
+  issupervision: false
+  image: ./pdf/covers/Oakestra-A-Lightweight-Hierarchical-Orchestration-Framework-for-Edge-Computing.png
+  pdf_url: ./pdf/not-available.pdf
+- title: 'Supporting Unikernel-based Microservices at the Edge'
+  author: Patrick Sabanic
+  publication_date: 12/2022
+  journal_title: MA thesis. Technical University Munich
+  firstpage: 34
+  lastpage: 36
+  issupervision: true
+  image: ./pdf/covers/Supporting-Unikernel-based-Microservices-at-the-Edge.png
+  pdf_url: ./pdf/Supporting-Unikernel-based-Microservices-at-the-Edge.pdf
+- title: 'Designing Interaction Framework for Multi-Admin Edge Infrastructures'
+  author: Maria Nievas Viñals
+  publication_date: 09/2022
+  journal_title: BA thesis. Technical University Munich
+  firstpage: 1
+  lastpage: 48
+  issupervision: true
+  image: ./pdf/covers/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.png
+  pdf_url: ./pdf/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.pdf
+- title: 'Oakestra: an orchestration framework for edge computing'
+  author: Giovanni Bartolomeo, Simon Bäurle, Nitinder Mohan, Jörg Ott
+  publication_date: 08/2022
+  journal_title: Proceedings of the SIGCOMM'22 Poster and Demo Sessions
+  firstpage: 34
+  lastpage: 36
+  issupervision: false
+  image: ./pdf/covers/Oakestra-An-Orchestration-Framework-for-Edge-Computing.png
+  pdf_url: ./pdf/Oakestra-An-Orchestration-Framework-for-Edge-Computing.pdf
+- title: Enabling Microservice Interactions within Heterogeneous Edge Infrastructures
+  author: Giovanni Bartolomeo
+  publication_date: 09/2021
+  journal_title: MA thesis. Technical University Munich
+  firstpage: 1
+  lastpage: 98
+  issupervision: false
+  image: ./pdf/covers/Enabling-Microservice-Interactions-within-Heterogeneous-Edge-Infrastructures.png
+  pdf_url: ./pdf/Enabling-Microservice-Interactions-within-Heterogeneous-Edge-Infrastructures.pdf
