@@ -1,6 +1,6 @@
 # Personal Geek Website 
 
-Visit me at: [giovannibartolomeo.it](giovannibartolomeo.it)
+Visit me at: [giovannibartolomeo.it](https://giovannibartolomeo.it)
 
 # How to run the website locally 
 
