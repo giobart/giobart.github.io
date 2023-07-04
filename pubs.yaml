@@ -1,12 +1,12 @@
 - title: 'Oakestra: A Lightweight Hierarchical Orchestration Framework for Edge Computing'
   author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
   publication_date: 07/2023
-  journal_title: USENIX Annual Technical Conference
-  firstpage: '-'
-  lastpage: 'TBD--'
+  journal_title: 2023 USENIX Annual Technical Conference (USENIX ATC 23)
+  firstpage: '215'
+  lastpage: '231'
   issupervision: false
-  image: ./pdf/covers/Oakestra-A-Lightweight-Hierarchical-Orchestration-Framework-for-Edge-Computing.png
-  pdf_url: ./pdf/not-available.pdf
+  image: ./pdf/covers/Oakestra_A_Lightweight_Hierarchical_Orchestration_Framework_for_Edge_Computing_atc_23.png
+  pdf_url: ./pdf/Oakestra_A_Lightweight_Hierarchical_Orchestration_Framework_for_Edge_Computing_atc_23.pdf
 - title: 'Supporting Unikernel-based Microservices at the Edge'
   author: Patrick Sabanic
   publication_date: 12/2022
