@@ -1,3 +1,12 @@
+- title: 'Characterizing Distributed Mobile Augmented Reality Applications at the Edge'
+  author: Giovanni Bartolomeo, Jacky Cao, Xiang Su, Nitinder Mohan
+  publication_date: 12/2023
+  journal_title: 2023 Companion of the 19th International Conference on emerging Networking EXperiments and Technologies (CoNEXT Companion ’23) 
+  firstpage: '-'
+  lastpage: '-'
+  issupervision: false
+  image: ./pdf/covers/paper-placeholder.png
+  pdf_url: ./pdf/not-available.pdf
 - title: 'Oakestra: A Lightweight Hierarchical Orchestration Framework for Edge Computing'
   author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
   publication_date: 07/2023
