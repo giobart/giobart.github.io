@@ -16,6 +16,11 @@
   issupervision: false
   image: ./pdf/covers/Oakestra_A_Lightweight_Hierarchical_Orchestration_Framework_for_Edge_Computing_atc_23.png
   pdf_url: ./pdf/Oakestra_A_Lightweight_Hierarchical_Orchestration_Framework_for_Edge_Computing_atc_23.pdf
+  badges: 
+    - ./badges/usenix-available.png
+    - ./badges/usenix-functional.png
+    - ./badges/usenix-reproduced.png
+  presentation: https://www.youtube.com/watch?v=tdwTqPh8lH0 
 - title: 'Supporting Unikernel-based Microservices at the Edge'
   author: Patrick Sabanic
   publication_date: 12/2022

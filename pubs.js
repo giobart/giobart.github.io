@@ -8,7 +8,15 @@ fetch('pubs.yaml')
     publications.forEach(publication => {
       const publicationElement = document.createElement('div');
       var supervision = publication.issupervision ? `Role: <span class="badge badge-primary badge-pill">Advisor</span>` : ` `;
+      var video = publication.presentation ? `<a class="btn btn-primary" href="${publication.presentation}" target="_blank"><span class="bi bi-camera-video"></span> Presentation</a>` : ` `;
       var link = publication.doi ? `href="${publication.doi}"` : `disabled`;
+      var badges = ``
+      if (publication.badges) {
+        publication.badges.forEach(badge => {
+          badges+=`<img style="width: 5em" src="${badge}" class="img-fluid rounded-start" alt="publication badge">`
+        })
+        badges+=`<br><br>`
+      }
       publicationElement.innerHTML = `
       <li class="list-group-item bg-dark">
         <div class="card mb-3 bg-dark" style="max-width: 540px;">
@@ -26,7 +34,9 @@ fetch('pubs.yaml')
                 <p class="card-text"><small class="text-muted">Date: <span itemprop="datePublished">${publication.publication_date}</span></small></p>
                 <a itemprop="url" ${publication.doi}></a>
                 <a itemprop="doi" ${publication.doi}></a>
+                ${badges}
                 <a class="btn btn-primary" href="${publication.pdf_url}" target="_blank"><span class="bi bi-file-pdf"></span>PDF</a>
+                ${video}
             </div>
             </div>
         </div>
