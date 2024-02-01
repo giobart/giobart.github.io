@@ -12,7 +12,7 @@
     - ./badges/acm_available_v1_1.png
     - ./badges/acm_functional_v1_1.png
     - ./badges/acm_reproduced_v1_1.png
-  presentation: https://www.youtube.com/watch?v=A86k3E7z1Ws
+  presentation: https://youtu.be/A86k3E7z1Ws?si=iKpZYQaHsfs4C6B9 
 - title: 'Oakestra: A Lightweight Hierarchical Orchestration Framework for Edge Computing'
   author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
   publication_date: 07/2023
