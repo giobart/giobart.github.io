@@ -64,11 +64,15 @@
         style="position:absolute"
         class="bg-dark w-100"
     >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <nav id="navbar-top">
             <ul class="nav nav-pills navbar-fixed-top bg-dark">
                 <li class="nav-item">
                     <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#News">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Publications">Publications</a>
@@ -134,30 +138,42 @@ Researcher and Ph.D. student
 
 
 
+            <!-- ########## News Section ############ -->
 
+            <div class="section text-center">
+                <h2 style="padding-top: 3em; padding-bottom: 1em;" id="News">
+                    News
+                </h4>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <div class="list-group" id="news-list"></div>
+                </div>
+            </div>
+            <script src="news.js"></script>
+            
 
             <!-- ########### Pubs Section ########### -->
 
 
 
 
-            <div class="section">
+            <div class="section text-center">
                 <h2 style="padding-top: 3em; padding-bottom: 1em;" id="Publications">
                     Publications
                 </h4>
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-md-auto">
+                    Filter: 
+                    <a class="badge badge-primary badge-pill" onclick="filterList('')">All</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterList('publication')">Publications</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterList('thesis')"">Theses</a>
+                    <br><br>
                     <ul class="list-group" id="publication-list"></ul>
                 </div>
             </div>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
             <script src="pubs.js"></script>
-
-
-
-
-
 
 
 
@@ -165,7 +181,7 @@ Researcher and Ph.D. student
 
 
 
-            <div class="section">
+            <div class="section text-center">
                 <h2 style="padding-top: 3em; padding-bottom: 1em;" id="Projects">
                     Projects
                 </h4>
@@ -207,7 +223,7 @@ Researcher and Ph.D. student
         <!-- ########### Contacts Section ########### -->
 
 
-            <div class="page-div section">
+            <div class="page-div section text-center">
                 <h2 style="padding-top: 3em" id="Contacts">
                     Contacts
                 </h4>
@@ -232,12 +248,7 @@ Researcher and Ph.D. student
                 <p>Office: 01.05.061</p>
 
 
-                <h4 style="padding-top: 1em">Office Hours:</h4>
-
-<!-- Google Calendar Appointment Scheduling begin -->
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3SsZYwo2XvyJEahWmehBzE4s6pFwKm_EzL34IaAdZwt_7AGsGCEj1PmiKj_zmBwZLyYkcE9sVF?gv=true" style="border: 0; background: white; border-radius: 10px;" width="100%" height="600" frameborder="0"></iframe>
-<!-- end Google Calendar Appointment Scheduling -->
-            </div>
+                <h4 style="padding-top: 1em">Office Hours: by appointment only (send me an email)</h4>
 
 
 <!-- ########### Ack Section ########### -->

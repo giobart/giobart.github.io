@@ -1,3 +1,21 @@
+function filterList(filter) {
+  // Declare variables
+  var ul, li, i, txtValue;
+  ul = document.getElementById("publication-list");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the filter
+  for (i = 0; i < li.length; i++) {
+    category = li[i].getElementsByTagName("div")[0];
+    txtValue = category.textContent || category.innerText;
+    if (txtValue.includes(filter)) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
 fetch('pubs.yaml')
   .then(response => response.text())
   .then(yamlText => {
@@ -19,6 +37,7 @@ fetch('pubs.yaml')
       }
       publicationElement.innerHTML = `
       <li class="list-group-item bg-dark">
+        <div style="display: none">${publication.category}</div>
         <div class="card mb-3 bg-dark" style="max-width: 540px;">
         <div class="row g-0 align-items-center">
             <div class="col-sm-4">
