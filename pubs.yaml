@@ -1,4 +1,15 @@
+- title: 'Multicloud Infrastructure Broker for Edge Orchestration Framework'
+  category: 'thesis'
+  author: Michael Schlicker
+  publication_date: 12/2023
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '70'
+  issupervision: true
+  image: ./pdf/covers/Multicloud-Infrastructure-Broker-for-Edge-Orchestration-Framework.png
+  pdf_url: ./pdf/Multicloud-Infrastructure-Broker-for-Edge-Orchestration-Framework.pdf
 - title: 'Characterizing Distributed Mobile Augmented Reality Applications at the Edge'
+  category: 'publication'
   doi: https://doi.org/10.1145/3624354.3630584
   author: Giovanni Bartolomeo, Jacky Cao, Xiang Su, Nitinder Mohan
   publication_date: 12/2023
@@ -14,6 +25,7 @@
     - ./badges/acm_reproduced_v1_1.png
   presentation: https://youtu.be/A86k3E7z1Ws?si=iKpZYQaHsfs4C6B9 
 - title: 'Oakestra: A Lightweight Hierarchical Orchestration Framework for Edge Computing'
+  category: 'publication'
   author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
   publication_date: 07/2023
   journal_title: 2023 USENIX Annual Technical Conference (USENIX ATC 23)
@@ -28,49 +40,54 @@
     - ./badges/usenix-reproduced.png
   presentation: https://www.youtube.com/watch?v=tdwTqPh8lH0 
 - title: 'Supporting Unikernel-based Microservices at the Edge'
+  category: 'thesis'
   author: Patrick Sabanic
   publication_date: 12/2022
   journal_title: MA thesis. Technical University Munich
-  firstpage: 34
-  lastpage: 36
+  firstpage: '1'
+  lastpage: '77'
   issupervision: true
   image: ./pdf/covers/Supporting-Unikernel-based-Microservices-at-the-Edge.png
   pdf_url: ./pdf/Supporting-Unikernel-based-Microservices-at-the-Edge.pdf
 - title: 'Designing Interaction Framework for Multi-Admin Edge Infrastructures'
+  category: 'thesis'
   author: Maria Nievas Viñals
   publication_date: 09/2022
   journal_title: BA thesis. Technical University Munich
-  firstpage: 1
-  lastpage: 48
+  firstpage: '1'
+  lastpage: '48'
   issupervision: true
   image: ./pdf/covers/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.png
   pdf_url: ./pdf/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.pdf
 - title: 'Oakestra: an orchestration framework for edge computing'
+  category: 'publication'
   doi: https://dl.acm.org/doi/abs/10.1145/3546037.3546056
   author: Giovanni Bartolomeo, Simon Bäurle, Nitinder Mohan, Jörg Ott
   publication_date: 08/2022
   journal_title: Proceedings of the SIGCOMM'22 Poster and Demo Sessions
-  firstpage: 34
-  lastpage: 36
+  firstpage: '34'
+  lastpage: '36'
   issupervision: false
   image: ./pdf/covers/Oakestra-An-Orchestration-Framework-for-Edge-Computing.png
   pdf_url: ./pdf/Oakestra-An-Orchestration-Framework-for-Edge-Computing.pdf
 - title: 'Oakestra white paper: An Orchestrator for Edge Computing'
+  category: 'publication'
   doi: https://arxiv.org/abs/2207.01577
   author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
   publication_date: 07/2022
   journal_title: arxiv.org 
-  firstpage: 1
-  lastpage: 12
+  firstpage: '1'
+  lastpage: '12'
   issupervision: false
   image: ./pdf/covers/Oakestra-whitepaper.png
   pdf_url: ./pdf/Oakestra-whitepaper.pdf
 - title: Enabling Microservice Interactions within Heterogeneous Edge Infrastructures
+  category: 'thesis'
   author: Giovanni Bartolomeo
   publication_date: 09/2021
   journal_title: MA thesis. Technical University Munich
-  firstpage: 1
-  lastpage: 98
+  firstpage: '1'
+  lastpage: '98'
   issupervision: false
   image: ./pdf/covers/Enabling-Microservice-Interactions-within-Heterogeneous-Edge-Infrastructures.png
   pdf_url: ./pdf/Enabling-Microservice-Interactions-within-Heterogeneous-Edge-Infrastructures.pdf
