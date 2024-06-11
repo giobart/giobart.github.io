@@ -3,6 +3,7 @@
   content: "I presented a talk titled Inside the Whale's Mouth - A Deep Dive into a Container. In this talk, we explored the build process and runtime of containers."
   link: 'https://devfest.gdgpisa.it/sessions/inside_the_whales_mouth_a_deep_dive_into_a_container'
   linkname: 'schedule 🔗'
+  picture: 'img/news/devfest.jpg'
 - title: "🐳 I'm attending Kubecon 2024"
   date:  '19/03/2024'
   content: "I'm attending Kubecon 2024 in Paris. Let's meet there!"
@@ -11,3 +12,4 @@
   content: "I offered a guest lecture and demo session about Oakestra for the Networked AI Systems course."
   link: 'https://www.youtube.com/watch?v=zXekRd9GveQ'
   linkname: 'recording 🔴'
+  picture: 'img/news/guest-lecture-helsinki.png'
