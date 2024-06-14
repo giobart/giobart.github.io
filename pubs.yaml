@@ -1,3 +1,14 @@
+
+- title: 'Next-Generation Orchestration Frameworks for Multicluster Cloud Edge Integration'
+  category: 'thesis'
+  author: Jackob Kempter
+  publication_date: 6/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '84'
+  issupervision: true
+  image: ./pdf/covers/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.png
+  pdf_url: ./pdf/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.pdf
 - title: 'Multicloud Infrastructure Broker for Edge Orchestration Framework'
   category: 'thesis'
   author: Michael Schlicker
