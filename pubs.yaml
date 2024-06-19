@@ -9,6 +9,7 @@
   issupervision: true
   image: ./pdf/covers/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.png
   pdf_url: ./pdf/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1718801627578
 - title: 'Multicloud Infrastructure Broker for Edge Orchestration Framework'
   category: 'thesis'
   author: Michael Schlicker
