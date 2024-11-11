@@ -1,4 +1,37 @@
 
+- title: 'Leveraging eBPF in Orchestrated Edge Infrastructures'
+  category: 'thesis'
+  author: Ben Julian Riegel
+  publication_date: 9/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '57'
+  issupervision: true
+  image: ./pdf/covers/BenRiegel_MT.png
+  pdf_url: ./pdf/BenRiegel_MT.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1726667506701
+- title: 'FLOps: Practical Federated Learning via Automated Orchestration (on the Edge)'
+  category: 'thesis'
+  author: Alexander Malyuk
+  publication_date: 9/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '152'
+  issupervision: true
+  image: ./pdf/covers/AlexanderMalyuk_MT.png
+  pdf_url: ./pdf/AlexanderMalyuk_MT.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1727269016148
+- title: 'Enhancing Edge Orchestration Flexibility through Addons'
+  category: 'thesis'
+  author: Mahmoud Elkodary
+  publication_date: 9/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '45'
+  issupervision: true
+  image: ./pdf/covers/Mahmoud_EkKodary_MT.png
+  pdf_url: ./pdf/Mahmoud_EkKodary_MT.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1726060359237
 - title: 'Next-Generation Orchestration Frameworks for Multicluster Cloud Edge Integration'
   category: 'thesis'
   author: Jackob Kempter
