@@ -5,7 +5,7 @@
   linkname: 'conference 🔗'
 - title: '📈 Accepted Poster @ EuroSys 2025'
   date:  '24/2/2025'
-  content: "I'll present our prelimirary results about 2DFS, a container packaging and distribution system optimized for large files distribution and on-demand image partitioning"
+  content: "Im going to present our preliminary results about 2DFS, a container packaging and distribution system optimized for large file distribution and on-demand image partitioning."
   link: 'https://2025.eurosys.org'
   linkname: 'conference 🔗'
   picture: 'img/news/2dfs-architecture.png'
