@@ -20,7 +20,7 @@
   lastpage: '2'
   issupervision: false
   image: ./pdf/covers/Beyond-Layers-Container-Registries-for-Files-Distribution.png
-  pdf_url: ./pdf/Beyond-Laters-Container-Registries-for-Files-Distribution.pdf
+  pdf_url: ./pdf/Beyond-Layers-Container-Registries-for-Files-Distribution.pdf
 - title: 'Leveraging eBPF in Orchestrated Edge Infrastructures'
   category: 'thesis'
   author: Ben Julian Riegel
