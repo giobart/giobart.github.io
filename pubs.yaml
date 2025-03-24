@@ -1,12 +1,12 @@
 
 - title: 'Supporting Hybrid Virtualization Orchestration for Edge Computing'
   category: 'publication'
-  doi: https://doi.org/10.1145/3624354.3630584
+  doi: https://doi.org/10.1145/3721888.3722093
   author: Giovanni Bartolomeo, Patrick Sabanic, Nitinder Mohan, Jörg Ott
   publication_date: 03/2025
   journal_title: EdgeSys 2025
-  firstpage: '9'
-  lastpage: '18'
+  firstpage: '1'
+  lastpage: '5'
   issupervision: false
   image: ./pdf/covers/Supporting-Hybrid-Virtualization-Orchestration-for-Edge-Computing.png
   pdf_url: ./pdf/Supporting-Hybrid-Virtualization-Orchestration-for-Edge-Computing.pdf
