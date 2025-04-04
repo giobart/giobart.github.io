@@ -25,6 +25,7 @@
   issupervision: false
   image: ./pdf/covers/Beyond-Layers-Container-Registries-for-Files-Distribution.png
   pdf_url: ./pdf/Beyond-Layers-Container-Registries-for-Files-Distribution.pdf
+  presentation: https://www.oakestra.io/blog/oakestra-shines-at-acm-eurosys--asplos-2025/poster-working.m4v
 - title: 'Leveraging eBPF in Orchestrated Edge Infrastructures'
   category: 'thesis'
   author: Ben Julian Riegel
