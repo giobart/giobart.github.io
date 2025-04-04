@@ -4,9 +4,11 @@
   doi: https://doi.org/10.1145/3721888.3722093
   author: Giovanni Bartolomeo, Patrick Sabanic, Nitinder Mohan, Jörg Ott
   publication_date: 03/2025
-  journal_title: ACM EdgeSys 2025
-  firstpage: '1'
-  lastpage: '5'
+  journal_title: "EdgeSys '25: Proceedings of the 8th International Workshop on Edge Systems, Analytics and Networking"
+  awards: 
+    - Best Paper Award
+  firstpage: '19'
+  lastpage: '24'
   issupervision: false
   image: ./pdf/covers/Supporting-Hybrid-Virtualization-Orchestration-for-Edge-Computing.png
   pdf_url: ./pdf/Supporting-Hybrid-Virtualization-Orchestration-for-Edge-Computing.pdf
@@ -16,6 +18,8 @@
   author: Giovanni Bartolomeo, Navidreza Asadi, Wolfgang Kellerer, Jörg Ott, Nitinder Mohan
   publication_date: 03/2025
   journal_title: ACM EuroSys 2025 Poster
+  awards: 
+    - Best Poster Award
   firstpage: '1'
   lastpage: '2'
   issupervision: false

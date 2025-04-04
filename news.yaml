@@ -1,3 +1,15 @@
+- title: '🏆 Best Poster Award @ EuroSys 2025'
+  date:  '1/4/2025'
+  content: "Our poster 'Beyond Layers: Container Registries for Files Distribution and On-Demand Image Partitioning' got the Best Poster Award at EuroSys 2025."
+  picture: 'img/news/eurosys_award.jpg'
+  link: 'https://www.giovannibartolomeo.it/pdf/Beyond-Layers-Container-Registries-for-Files-Distribution.pdf'
+  linkname: 'poster 🔗'
+- title: '🏆 Best Paper Award @ EdgeSys 2025'
+  date:  '31/3/2025'
+  content: "Our paper 'Supporting Hybrid Virtualization Orchestration for Edge Computing' got the Best Paper Award at EdgeSys 2025."
+  picture: 'img/news/edgesys_award.jpg'
+  link: 'https://doi.org/10.1145/3721888.3722093'
+  linkname: 'article 🔗'
 - title: '📄 Accepted Paper @ EdgeSys 2025'
   date:  '1/3/2025'
   content: "The paper 'Supporting Hybrid Virtualization Orchestration for Edge Computing' has been accepted at EdgeSys 2025."

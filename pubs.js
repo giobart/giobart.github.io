@@ -25,9 +25,25 @@ fetch('pubs.yaml')
 
     publications.forEach(publication => {
       const publicationElement = document.createElement('div');
+
+      // Check if this is a supervision or a publication
       var supervision = publication.issupervision ? `Role: <span class="badge badge-primary badge-pill">Advisor</span>` : ` `;
+
+      // Check the publication awards
+      var awards = ''
+      if (publication.awards && publication.awards.length > 0) {
+        for (var i = 0; i < publication.awards.length; i++) {
+          awards += `<span class="badge badge-primary badge-pill" itemprop="award" style="background-color: yellow; color: black"> 🏆 ${publication.awards[i]} </span>`;
+        }
+      }
+
+      // Check presentation video available
       var video = publication.presentation ? `<a class="btn btn-primary" href="${publication.presentation}" target="_blank"><span class="bi bi-camera-video"></span> Presentation</a>` : ` `;
+      
+      // Check ig DOI available
       var link = publication.doi ? `href="${publication.doi}"` : `disabled`;
+      
+      // Add badges
       var badges = ``
       if (publication.badges) {
         publication.badges.forEach(badge => {
@@ -48,6 +64,7 @@ fetch('pubs.yaml')
                 <h5 class="card-title"> <b> <a itemprop="name" ${link}> ${publication.title} </a> </b></h5>
                 <p class="card-text" >Authors: <span itemprop="author"> ${publication.author} </span></p>
                 <p class="card-text"> <span itemprop="journalName"> ${publication.journal_title} </span></p>
+                ${awards}
                 ${supervision}
                 <p class="card-text">Pages: ${publication.firstpage}-${publication.lastpage}</p>
                 <p class="card-text"><small class="text-muted">Date: <span itemprop="datePublished">${publication.publication_date}</span></small></p>
