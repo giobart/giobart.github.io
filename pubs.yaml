@@ -143,7 +143,7 @@
   image: ./pdf/covers/Oakestra-An-Orchestration-Framework-for-Edge-Computing.png
   pdf_url: ./pdf/Oakestra-An-Orchestration-Framework-for-Edge-Computing.pdf
 - title: 'Oakestra white paper: An Orchestrator for Edge Computing'
-  category: 'publication'
+  category: 'whitepaper'
   doi: https://arxiv.org/abs/2207.01577
   author: Giovanni Bartolomeo, Mehdi Yosofie, Simon Bäurle, Oliver Haluszczynski, Nitinder Mohan, Jörg Ott
   publication_date: 07/2022
