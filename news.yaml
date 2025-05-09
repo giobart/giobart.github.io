@@ -2,7 +2,7 @@
   date:  '1/5/2025'
   content: "Our paper 'On-Demand Container Partitioning for Distributed ML' has been accepted and will be presented at the Usenix Annual Technical Conference (ATC '25)."
   link: 'https://www.usenix.org/conference/atc25'
-  linkname: 'conference website 🔗'
+  linkname: 'conference 🔗'
 - title: '🏆 Best Poster Award @ EuroSys 2025'
   date:  '1/4/2025'
   content: "Our poster 'Beyond Layers: Container Registries for Files Distribution and On-Demand Image Partitioning' got the Best Poster Award at EuroSys 2025."
