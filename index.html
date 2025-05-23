@@ -78,6 +78,9 @@
                     <a class="nav-link" href="#Publications">Publications</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#Students">Students</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#Projects">Projects</a>
                 </li>
                 <li class="nav-item">
@@ -154,9 +157,6 @@ Researcher and Ph.D. Candidate
 
             <!-- ########### Pubs Section ########### -->
 
-
-
-
             <div class="section text-center">
                 <h2 style="padding-top: 3em; padding-bottom: 1em;" id="Publications">
                     Publications
@@ -165,15 +165,35 @@ Researcher and Ph.D. Candidate
             <div class="row justify-content-md-center">
                 <div class="col-md-auto">
                     Category: 
-                    <a class="badge badge-primary badge-pill" onclick="filterList('')">All</a>
-                    <a class="badge badge-secondary badge-pill" onclick="filterList('publication')">Publications</a>
-                    <a class="badge badge-secondary badge-pill" onclick="filterList('whitepaper')">Whitepapers</a>
-                    <a class="badge badge-secondary badge-pill" onclick="filterList('thesis')"">Theses</a>
+                    <a class="badge badge-primary badge-pill" onclick="filterPubList('')">All</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterPubList('publication')">Publications</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterPubList('whitepaper')">Whitepapers</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterPubList('thesis')"">Theses</a>
                     <br><br>
                     <ul class="list-group" id="publication-list"></ul>
                 </div>
             </div>
             <script src="pubs.js"></script>
+
+
+            <!-- ########### Supervisions Section ########### -->
+
+            <div class="section text-center">
+                <h2 style="padding-top: 3em; padding-bottom: 1em;" id="Students">
+                    Supervised Student Projects and Theses
+                </h4>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    Category: 
+                    <a class="badge badge-primary badge-pill" onclick="filterStudentList('')">All</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterStudentList('ma-thesis')">Master's Theses</a>
+                    <a class="badge badge-secondary badge-pill" onclick="filterStudentList('ba-thesis')">Bachelor's Theses</a>
+                    <br><br>
+                    <ul class="list-group" id="student-list"></ul>
+                </div>
+            </div>
+            <script src="students.js"></script>
 
 
 

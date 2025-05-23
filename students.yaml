@@ -1,0 +1,68 @@
+
+- title: 'Leveraging eBPF in Orchestrated Edge Infrastructures'
+  category: 'ma-thesis'
+  author: Ben Julian Riegel
+  publication_date: 9/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '57'
+  image: ./pdf/covers/BenRiegel_MT.png
+  pdf_url: ./pdf/BenRiegel_MT.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1726667506701
+- title: 'FLOps: Practical Federated Learning via Automated Orchestration (on the Edge)'
+  category: 'ma-thesis'
+  author: Alexander Malyuk
+  publication_date: 9/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '152'
+  image: ./pdf/covers/AlexanderMalyuk_MT.png
+  pdf_url: ./pdf/AlexanderMalyuk_MT.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1727269016148
+- title: 'Enhancing Edge Orchestration Flexibility through Addons'
+  category: 'ma-thesis'
+  author: Mahmoud Elkodary
+  publication_date: 9/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '45'
+  image: ./pdf/covers/Mahmoud_EkKodary_MT.png
+  pdf_url: ./pdf/Mahmoud_EkKodary_MT.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1726060359237
+- title: 'Next-Generation Orchestration Frameworks for Multicluster Cloud Edge Integration'
+  category: 'ma-thesis'
+  author: Jackob Kempter
+  publication_date: 6/2024
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '84'
+  image: ./pdf/covers/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.png
+  pdf_url: ./pdf/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1718801627578
+- title: 'Multicloud Infrastructure Broker for Edge Orchestration Framework'
+  category: 'ma-thesis'
+  author: Michael Schlicker
+  publication_date: 12/2023
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '70'
+  image: ./pdf/covers/Multicloud-Infrastructure-Broker-for-Edge-Orchestration-Framework.png
+  pdf_url: ./pdf/Multicloud-Infrastructure-Broker-for-Edge-Orchestration-Framework.pdf
+- title: 'Supporting Unikernel-based Microservices at the Edge'
+  category: 'ma-thesis'
+  author: Patrick Sabanic
+  publication_date: 12/2022
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '77'
+  image: ./pdf/covers/Supporting-Unikernel-based-Microservices-at-the-Edge.png
+  pdf_url: ./pdf/Supporting-Unikernel-based-Microservices-at-the-Edge.pdf
+- title: 'Designing Interaction Framework for Multi-Admin Edge Infrastructures'
+  category: 'ba-thesis'
+  author: Maria Nievas Viñals
+  publication_date: 09/2022
+  journal_title: BA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '48'
+  image: ./pdf/covers/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.png
+  pdf_url: ./pdf/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.pdf

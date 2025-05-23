@@ -1,7 +1,7 @@
-function filterPubList(filter) {
+function filterStudentList(filter) {
   // Declare variables
   var ul, li, i, txtValue;
-  ul = document.getElementById("publication-list");
+  ul = document.getElementById("student-list");
   li = ul.getElementsByTagName('li');
 
   // Loop through all list items, and hide those who don't match the filter
@@ -16,12 +16,12 @@ function filterPubList(filter) {
   }
 }
 
-fetch('pubs.yaml')
+fetch('students.yaml')
   .then(response => response.text())
   .then(yamlText => {
     const publications = jsyaml.load(yamlText);
 
-    const publicationListContainer = document.getElementById('publication-list');
+    const publicationListContainer = document.getElementById('student-list');
 
     publications.forEach(publication => {
       const publicationElement = document.createElement('div');
