@@ -1,3 +1,9 @@
+- title: '🎖️ Artifacts Reproduced @ Usenix ATC 2025'
+  date:  '1/5/2025'
+  content: "Our paper, On-Demand Container Partitioning for Distributed ML, has been awarded the artifacts available, functional, and reproduced badges."
+  link: 'https://github.com/2DFS'
+  linkname: 'repository 🔗'
+  picture: 'img/news/usenix-badges.png'
 - title: '📄 Accepted Paper @ Usenix ATC 2025'
   date:  '1/5/2025'
   content: "Our paper 'On-Demand Container Partitioning for Distributed ML' has been accepted and will be presented at the Usenix Annual Technical Conference (ATC '25)."
