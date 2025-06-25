@@ -1,4 +1,13 @@
 
+- title: 'A Comparative Analysis of a CNN Model Deployment on Amazon Web Services'
+  category: 'ma-thesis'
+  author: Hongyu Guo
+  publication_date: 6/2025
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '65'
+  image: ./pdf/covers/A_Comparative_Analysis_of_a_CNN_Model_Deployment_on_Amazon_Web_Services.png
+  pdf_url: ./pdf/A_Comparative_Analysis_of_a_CNN_Model_Deployment_on_Amazon_Web_Services.pdf
 - title: 'Leveraging eBPF in Orchestrated Edge Infrastructures'
   category: 'ma-thesis'
   author: Ben Julian Riegel
