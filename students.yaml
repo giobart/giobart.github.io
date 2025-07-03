@@ -8,6 +8,7 @@
   lastpage: '65'
   image: ./pdf/covers/A_Comparative_Analysis_of_a_CNN_Model_Deployment_on_Amazon_Web_Services.png
   pdf_url: ./pdf/A_Comparative_Analysis_of_a_CNN_Model_Deployment_on_Amazon_Web_Services.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1750856290276
 - title: 'Leveraging eBPF in Orchestrated Edge Infrastructures'
   category: 'ma-thesis'
   author: Ben Julian Riegel
