@@ -1,3 +1,17 @@
+- title: 'On-Demand Container Partitioning for Distributed ML'
+  category: 'publication'
+  author: Giovanni Bartolomeo, Navidreza Asadi, Wolfgang Kellerer, Jörg Ott, Nitinder Mohan 
+  publication_date: 07/2025
+  doi: https://www.usenix.org/conference/atc25/presentation/bartolomeo
+  journal_title: 2025 USENIX Annual Technical Conference (USENIX ATC 25)
+  firstpage: '1481'
+  lastpage: '1500'
+  image: ./pdf/covers/ATC25-Bartolomeo-On-Demand-Container-Partitioning-for-Distributed-ML.png
+  pdf_url: ./pdf/ATC25-Bartolomeo-On-Demand-Container-Partitioning-for-Distributed-ML.pdf
+  badges: 
+    - ./badges/usenix-available.png
+    - ./badges/usenix-functional.png
+    - ./badges/usenix-reproduced.png
 - title: 'Supporting Hybrid Virtualization Orchestration for Edge Computing'
   category: 'publication'
   doi: https://doi.org/10.1145/3721888.3722093
