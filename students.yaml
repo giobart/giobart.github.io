@@ -1,4 +1,13 @@
 
+- title: 'Telemetry Driven Network Optimization for Edge-Cloud Orchestration Frameworks'
+  category: 'ma-thesis'
+  author: Simon Zelenski
+  journal_title: MA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '112'
+  image: ./pdf/covers/MT-Simon-Zelenski.png
+  pdf_url: ./pdf/MT-Simon-Zelenski.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1753881457414
 - title: 'A Comparative Analysis of a CNN Model Deployment on Amazon Web Services'
   category: 'ma-thesis'
   author: Hongyu Guo
