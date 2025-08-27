@@ -1,3 +1,9 @@
+- title: "💼 We're hiring"
+  date:  '27/8/2025'
+  content: "We're looking for a Student Assistant (HiWi) to join our team! Please take a look at the job posting for more details."
+  link: 'pdf/HiWi-opening-sep-2025.pdf'
+  linkname: 'job posting 🔗'
+  picture: 'img/news/hiring.png'
 - title: '🎖️ Artifacts Reproduced @ Usenix ATC 2025'
   date:  '1/5/2025'
   content: "Our paper, On-Demand Container Partitioning for Distributed ML, has been awarded the artifacts available, functional, and reproduced badges."

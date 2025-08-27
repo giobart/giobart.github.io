@@ -1,0 +1,90 @@
+/* macOS Window Styling */
+.macos-window {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.macos-titlebar {
+    height: 40px;
+    background: linear-gradient(to bottom, #3c3c3c, #2a2a2a);
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+}
+
+.macos-traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.macos-traffic-light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.macos-traffic-light.close {
+    background: linear-gradient(to bottom, #ff6058, #ff453a);
+}
+
+.macos-traffic-light.minimize {
+    background: linear-gradient(to bottom, #ffbd2e, #ff9500);
+}
+
+.macos-traffic-light.maximize {
+    background: linear-gradient(to bottom, #28ca42, #30d158);
+}
+
+.macos-window-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.macos-content {
+    background-color: #1e1e1e;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+/* Custom scrollbar for macOS look */
+.macos-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.macos-content::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+.macos-content::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.macos-content::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* News items styling inside macOS window */
+.macos-content .card {
+    background-color: #2a2a2a !important;
+    border: 1px solid #2a2a2a;
+    padding: 10px;
+}
+
+.macos-content .card:hover {
+    background-color: #333 !important;
+    transition: background-color 0.2s ease;
+}

@@ -36,6 +36,7 @@
         >
         <link href="css/hacker.css" rel="stylesheet">
         <link href="css/typer.css" rel="stylesheet">
+        <link href="css/macos-window.css" rel="stylesheet">
         <link href="css/myiframe.css" rel="stylesheet">
         <!-- End Bootstrap -->
         <style>
@@ -48,13 +49,14 @@
                 --glow: 1;
             }
             @media screen and (min-width: 100px) {
-            :root {
-                --size: 2.3;
+                :root {
+                    --size: 2.3;
+                }
             }
             @media screen and (min-width: 1000px) {
-            :root {
-                --size: 1.5;
-            }
+                :root {
+                    --size: 1.5;
+                }
             }
         </style>
     </head>
@@ -108,12 +110,14 @@
                         <img src="./img/pic-old.png" class="small-img"></img>
                     </div>
                     <div class="col-md-auto" style="min-width: 25em;">
-                        <pre id="typewriter" class="bg-dark" style="padding-top: 1.5em;">
-
-                            
+                        <pre id="typewriter" class="bg-dark" style="padding-top: 1.5em;">                
 Researcher and Ph.D. Candidate
 @  Technical University of Munich
    Chair of Connected Mobility
+
+Research Intern 
+@ Telefónica Innovación Digital
+  Barcelona, Spain
 </pre>
                     </div>
                 </div>
@@ -141,12 +145,24 @@ Researcher and Ph.D. Candidate
 
             <div class="section text-center">
                 <h2 style="padding-top: 3em; padding-bottom: 1em;" id="News">
-                    News
+                    
                 </h4>
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-md-auto">
-                    <div class="list-group" id="news-list"></div>
+                    <div class="macos-window">
+                        <div class="macos-titlebar">
+                            <div class="macos-traffic-lights">
+                                <div class="macos-traffic-light close"></div>
+                                <div class="macos-traffic-light minimize"></div>
+                                <div class="macos-traffic-light maximize"></div>
+                            </div>
+                            <div class="macos-window-title">Latest News</div>
+                        </div>
+                        <div class="macos-content">
+                            <div class="list-group" id="news-list"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <script src="news.js"></script>
@@ -254,7 +270,6 @@ Researcher and Ph.D. Candidate
                     target="_blank"
                 ></a>
                 <a href="https://www.linkedin.com/in/giobart/" target="_blank" style="color: white; text-decoration: none" class="fa fa-linkedin display-4"></a>
-                <a href="https://www.facebook.com/giobarty" target="_blank" style="color: white; text-decoration: none" class="fa fa-facebook display-4"></a>
                 <a href="https://campus.tum.de/tumonline/pl/ui/$ctx;design=pl;header=max;lang=en/visitenkarte.show_vcard?pPersonenId=38FEFD5355300D4E&pPersonenGruppe=3" target="_blank" style="color: white; text-decoration: none" class="fa fa-briefcase display-4"></a>
                 <a href="mailto:giovanni.bartolomeo@tum.de" target="_blank" style="color: white; text-decoration: none" class="fa fa-envelope display-4"></a>
 
