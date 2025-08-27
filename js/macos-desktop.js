@@ -8,11 +8,255 @@ class MacOSWindowManager {
     }
 
     init() {
-        this.createDesktopStructure();
-        this.initializeWindows();
+        if (window.innerWidth <= 768) {
+            this.createIOSHomescreen();
+        } else {
+            this.createDesktopStructure();
+            this.initializeWindows();
+        }
         this.setupEventListeners();
         this.updateTime();
         setInterval(() => this.updateTime(), 1000);
+    }
+
+    createIOSHomescreen() {
+        const body = document.body;
+        
+        // Add iOS mode class to body (this will hide all other content via CSS)
+        body.classList.add('ios-mode');
+        
+        // Create iOS homescreen container
+        const homescreen = document.createElement('div');
+        homescreen.className = 'ios-homescreen mobile-view';
+        
+        // Create status bar
+        const statusBar = document.createElement('div');
+        statusBar.className = 'ios-status-bar';
+        statusBar.innerHTML = `
+            <div>9:41</div>
+            <div>Giovanni Bartolomeo</div>
+            <div>100%</div>
+        `;
+        
+        // Create app container
+        const appContainer = document.createElement('div');
+        appContainer.className = 'ios-app-container';
+        appContainer.id = 'ios-apps';
+        
+        // Create About app (default)
+        const aboutApp = this.createIOSApp('about', 'About', '👤', true);
+        appContainer.appendChild(aboutApp);
+        
+        // Create other apps
+        const apps = [
+            { id: 'news', title: 'News', icon: '📰' },
+            { id: 'publications', title: 'Publications', icon: '📚' },
+            { id: 'students', title: 'Students', icon: '👥' },
+            { id: 'projects', title: 'Projects', icon: '🚀' },
+            { id: 'contacts', title: 'Contacts', icon: '📧' }
+        ];
+        
+        apps.forEach(app => {
+            const appElement = this.createIOSApp(app.id, app.title, app.icon, false);
+            appContainer.appendChild(appElement);
+        });
+        
+        // Create dock
+        const dock = document.createElement('div');
+        dock.className = 'ios-dock';
+        dock.innerHTML = `
+            <div class="ios-dock-item-container">
+                <div class="ios-dock-item active" data-app="about">👤</div>
+                <div class="ios-dock-label">About</div>
+            </div>
+            <div class="ios-dock-item-container">
+                <div class="ios-dock-item" data-app="news">📰</div>
+                <div class="ios-dock-label">News</div>
+            </div>
+            <div class="ios-dock-item-container">
+                <div class="ios-dock-item" data-app="publications">📚</div>
+                <div class="ios-dock-label">Publications</div>
+            </div>
+            <div class="ios-dock-item-container">
+                <div class="ios-dock-item" data-app="students">👥</div>
+                <div class="ios-dock-label">Students</div>
+            </div>
+            <div class="ios-dock-item-container">
+                <div class="ios-dock-item" data-app="projects">🚀</div>
+                <div class="ios-dock-label">Projects</div>
+            </div>
+            <div class="ios-dock-item-container">
+                <div class="ios-dock-item" data-app="contacts">📧</div>
+                <div class="ios-dock-label">Contacts</div>
+            </div>
+        `;
+        
+        homescreen.appendChild(statusBar);
+        homescreen.appendChild(appContainer);
+        homescreen.appendChild(dock);
+        
+        body.insertBefore(homescreen, body.firstChild);
+        
+        // Load content for apps immediately
+        this.loadIOSContent();
+    }
+
+    createIOSApp(id, title, icon, isDefault) {
+        const app = document.createElement('div');
+        app.className = `ios-app ${id}${isDefault ? ' active' : ''}`;
+        app.id = `ios-app-${id}`;
+        
+        app.innerHTML = `
+            <div class="ios-app-header">
+                <div class="ios-app-title">${icon} ${title}</div>
+            </div>
+            <div class="ios-app-content" id="ios-${id}-content"></div>
+        `;
+        
+        return app;
+    }
+
+    loadIOSContent() {
+        console.log('Loading iOS content...');
+        
+        // Load About content
+        const aboutSection = document.querySelector('#About');
+        console.log('About section found:', aboutSection);
+        if (aboutSection) {
+            const aboutPageDiv = aboutSection.closest('.page-div');
+            console.log('About page div found:', aboutPageDiv);
+            if (aboutPageDiv) {
+                const aboutContent = aboutPageDiv.cloneNode(true);
+                aboutContent.classList.add('about-content', 'ios');
+                aboutContent.style.display = 'block';
+                const aboutContainer = document.getElementById('ios-about-content');
+                console.log('About container found:', aboutContainer);
+                if (aboutContainer) {
+                    aboutContainer.innerHTML = ''; // Clear first
+                    aboutContainer.appendChild(aboutContent);
+                    
+                    // Initialize typewriter effect
+                    setTimeout(() => {
+                        this.initializeTypewriter();
+                    }, 100);
+                }
+            }
+        } else {
+            // Fallback content if About section not found
+            const aboutContainer = document.getElementById('ios-about-content');
+            if (aboutContainer) {
+                aboutContainer.innerHTML = `
+                    <div class="about-content ios">
+                        <h2>Giovanni Bartolomeo</h2>
+                        <p>Researcher and Ph.D. Candidate</p>
+                        <p>Content loaded successfully!</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Load other content
+        this.loadNewsForIOS();
+        this.loadPublicationsForIOS();
+        this.loadStudentsForIOS();
+        this.loadProjectsForIOS();
+        this.loadContactsForIOS();
+    }
+
+    loadNewsForIOS() {
+        console.log('Loading news for iOS...');
+        const newsListElement = document.querySelector('#news-list');
+        console.log('News list element found:', newsListElement);
+        if (newsListElement) {
+            const newsContent = newsListElement.cloneNode(true);
+            newsContent.style.display = 'block';
+            const newsContainer = document.getElementById('ios-news-content');
+            console.log('News container found:', newsContainer);
+            if (newsContainer) {
+                newsContainer.innerHTML = ''; // Clear first
+                newsContainer.appendChild(newsContent);
+                console.log('News content loaded');
+            }
+        } else {
+            // Add fallback content
+            const newsContainer = document.getElementById('ios-news-content');
+            if (newsContainer) {
+                newsContainer.innerHTML = '<p>News content not found</p>';
+            }
+        }
+    }
+
+    loadPublicationsForIOS() {
+        console.log('Loading publications for iOS...');
+        const pubSection = document.querySelector('#Publications');
+        console.log('Publications section found:', pubSection);
+        if (pubSection) {
+            const pubRow = pubSection.closest('.section');
+            if (pubRow && pubRow.nextElementSibling) {
+                const pubContent = pubRow.nextElementSibling;
+                console.log('Publications content found:', pubContent);
+                const content = pubContent.cloneNode(true);
+                content.style.display = 'block';
+                const pubContainer = document.getElementById('ios-publications-content');
+                console.log('Publications container found:', pubContainer);
+                if (pubContainer) {
+                    pubContainer.innerHTML = ''; // Clear first
+                    pubContainer.appendChild(content);
+                    console.log('Publications content loaded');
+                }
+            }
+        } else {
+            // Add fallback content
+            const pubContainer = document.getElementById('ios-publications-content');
+            if (pubContainer) {
+                pubContainer.innerHTML = '<p>Publications content not found</p>';
+            }
+        }
+    }
+
+    loadStudentsForIOS() {
+        const studentSection = document.querySelector('#Students');
+        if (studentSection) {
+            const studentContent = studentSection.closest('.section').nextElementSibling;
+            if (studentContent) {
+                const content = studentContent.cloneNode(true);
+                content.style.display = 'block';
+                const studentContainer = document.getElementById('ios-students-content');
+                if (studentContainer) {
+                    studentContainer.appendChild(content);
+                }
+            }
+        }
+    }
+
+    loadProjectsForIOS() {
+        const projectSection = document.querySelector('#Projects');
+        if (projectSection) {
+            const projectContent = projectSection.closest('.section');
+            if (projectContent) {
+                const content = projectContent.cloneNode(true);
+                content.style.display = 'block';
+                const projectContainer = document.getElementById('ios-projects-content');
+                if (projectContainer) {
+                    projectContainer.appendChild(content);
+                }
+            }
+        }
+    }
+
+    loadContactsForIOS() {
+        const contactSection = document.querySelector('#Contacts');
+        if (contactSection) {
+            const contactContent = contactSection.closest('.page-div');
+            if (contactContent) {
+                const content = contactContent.cloneNode(true);
+                content.style.display = 'block';
+                const contactContainer = document.getElementById('ios-contacts-content');
+                if (contactContainer) {
+                    contactContainer.appendChild(content);
+                }
+            }
+        }
     }
 
     createDesktopStructure() {
@@ -188,10 +432,11 @@ class MacOSWindowManager {
         if (aboutSection && sidebar) {
             const aboutContent = aboutSection.cloneNode(true);
             aboutContent.classList.add('about-content');
+            aboutContent.classList.add('cloned-sidebar-content'); // Add specific marker for cloned content
             sidebar.appendChild(aboutContent);
             
             // Hide original only on desktop
-            aboutSection.style.display = 'none';
+            //aboutSection.style.display = 'none';
             aboutSection.classList.add('desktop-hidden');
             
             // Initialize typewriter effect on the cloned element
@@ -330,11 +575,17 @@ class MacOSWindowManager {
     }
 
     setupEventListeners() {
-        // Dock clicks
+        // Desktop dock clicks
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('dock-item')) {
                 const windowId = e.target.dataset.window;
                 this.toggleWindow(windowId);
+            }
+            
+            // iOS dock clicks
+            if (e.target.classList.contains('ios-dock-item')) {
+                const appId = e.target.dataset.app;
+                this.switchIOSApp(appId);
             }
             
             // Window controls
@@ -367,12 +618,18 @@ class MacOSWindowManager {
         // Responsive handling
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
-                // Switching to mobile - show original sections
-                this.restoreOriginalLayout();
+                // Switching to mobile - show iOS homescreen
                 document.querySelector('.macos-desktop')?.remove();
-                document.querySelector('.mobile-view').style.display = 'block';
+                if (!document.querySelector('.ios-homescreen')) {
+                    // First restore the original layout to clean up desktop mode
+                    this.restoreOriginalLayout();
+                    // Then create iOS homescreen
+                    this.createIOSHomescreen();
+                }
             } else if (window.innerWidth > 768 && !document.querySelector('.macos-desktop')) {
                 // Switching back to desktop - reinitialize
+                document.querySelector('.ios-homescreen')?.remove();
+                this.restoreOriginalLayout();
                 setTimeout(() => {
                     new MacOSWindowManager();
                 }, 100);
@@ -381,11 +638,43 @@ class MacOSWindowManager {
     }
 
     restoreOriginalLayout() {
-        // Show all hidden sections for mobile
+        console.log('Restoring original layout...');
+        
+        // Simply remove iOS mode class from body - CSS will handle the rest
+        document.body.classList.remove('ios-mode');
+        
+        // Remove iOS homescreen if it exists
+        const iosHomescreen = document.querySelector('.ios-homescreen');
+        if (iosHomescreen) {
+            iosHomescreen.remove();
+        }
+        
+        // Remove ALL cloned content - be very aggressive about this
+        document.querySelectorAll('.cloned-sidebar-content').forEach(element => {
+            console.log('Removing cloned sidebar content:', element);
+            element.remove();
+        });
+        
+        document.querySelectorAll('.about-content').forEach(element => {
+            console.log('Removing about-content:', element);
+            element.remove();
+        });
+        
+        // Clear the entire sidebar content completely
+        const existingSidebar = document.getElementById('about-sidebar');
+        if (existingSidebar) {
+            console.log('Clearing sidebar innerHTML');
+            existingSidebar.innerHTML = ''; // Clear sidebar content
+        }
+        
+        // Now restore the original About section
         document.querySelectorAll('.desktop-hidden').forEach(element => {
+            console.log('Restoring desktop-hidden element:', element);
             element.style.display = '';
             element.classList.remove('desktop-hidden');
         });
+        
+        console.log('Original layout restored');
     }
 
     toggleWindow(windowId) {
@@ -479,20 +768,57 @@ class MacOSWindowManager {
             });
             timeElement.textContent = timeString;
         }
+        
+        // Update iOS status bar time
+        const statusTime = document.querySelector('.ios-status-bar > div:first-child');
+        if (statusTime) {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false 
+            });
+            statusTime.textContent = timeString;
+        }
+    }
+
+    switchIOSApp(appId) {
+        // Hide all apps
+        document.querySelectorAll('.ios-app').forEach(app => {
+            app.classList.remove('active');
+        });
+        
+        // Show selected app
+        const selectedApp = document.getElementById(`ios-app-${appId}`);
+        if (selectedApp) {
+            selectedApp.classList.add('active');
+        }
+        
+        // Update dock indicators
+        document.querySelectorAll('.ios-dock-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        const activeItem = document.querySelector(`[data-app="${appId}"]`);
+        if (activeItem) {
+            activeItem.classList.add('active');
+        }
     }
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Only initialize on desktop
-    if (window.innerWidth > 768) {
-        new MacOSWindowManager();
-    }
+    // Initialize for both desktop and mobile
+    new MacOSWindowManager();
 });
 
 // Handle window resize
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && !document.querySelector('.macos-desktop')) {
+        document.querySelector('.ios-homescreen')?.remove();
+        new MacOSWindowManager();
+    } else if (window.innerWidth <= 768 && !document.querySelector('.ios-homescreen')) {
+        document.querySelector('.macos-desktop')?.remove();
         new MacOSWindowManager();
     }
 });
