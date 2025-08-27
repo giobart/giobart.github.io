@@ -23,16 +23,7 @@
     }
 
     .ios-status-bar {
-        height: 44px !important;
-        background: rgba(0, 0, 0, 0.1) !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 0 20px !important;
-        color: white !important;
-        font-size: 14px !important;
-        font-weight: 600 !important;
-        flex-shrink: 0 !important;
+        display: none !important;
     }
 
     .ios-app-container {
@@ -174,7 +165,7 @@
         padding: 15px; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 10px 0; /* Reduced margin */
-        margin-bottom: 10em;
+        margin-bottom: 15em;
     }
 
     .about-content.ios a {
@@ -205,7 +196,7 @@
         backdrop-filter: blur(10px);
         border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 10em !important; 
+        padding-bottom: 15em !important; 
     }
 
     .ios-app.publications {
@@ -216,7 +207,7 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 10px 0; /* Reduced margin */
         color:black !important;
-        padding-bottom: 10em; /* Reduced bottom padding */
+        padding-bottom: 15em; /* Reduced bottom padding */
     }
 
     .ios-app.students {
@@ -227,7 +218,7 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 10px 0; /* Reduced margin */
         color: black !important;
-        padding-bottom: 10em; /* Reduced bottom padding */
+        padding-bottom: 15em; /* Reduced bottom padding */
     }
 
     .ios-app.projects {
@@ -238,7 +229,7 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 10px 0; /* Reduced margin */
         color: black !important;
-        padding-bottom: 10em; /* Reduced bottom padding */
+        padding-bottom: 15em; /* Reduced bottom padding */
     }
 
     .ios-app.contacts {
@@ -249,7 +240,7 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 10px 0; /* Reduced margin */
         color: black !important;
-        padding-bottom: 10em; /* Reduced bottom padding */
+        padding-bottom: 15em; /* Reduced bottom padding */
     }
 
     .ios-app .card {
