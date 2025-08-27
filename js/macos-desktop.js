@@ -58,11 +58,26 @@ class MacOSWindowManager {
         const dock = document.createElement('div');
         dock.className = 'macos-dock';
         dock.innerHTML = `
-            <div class="dock-item" data-window="news" title="News">📰</div>
-            <div class="dock-item" data-window="publications" title="Publications">📚</div>
-            <div class="dock-item" data-window="students" title="Students">👥</div>
-            <div class="dock-item" data-window="projects" title="Projects">🚀</div>
-            <div class="dock-item" data-window="contacts" title="Contacts">📧</div>
+            <div class="dock-item-container">
+                <div class="dock-item" data-window="news" title="News">📰</div>
+                <div class="dock-label">News</div>
+            </div>
+            <div class="dock-item-container">
+                <div class="dock-item" data-window="publications" title="Publications">📚</div>
+                <div class="dock-label">Publications</div>
+            </div>
+            <div class="dock-item-container">
+                <div class="dock-item" data-window="students" title="Students">👥</div>
+                <div class="dock-label">Students</div>
+            </div>
+            <div class="dock-item-container">
+                <div class="dock-item" data-window="projects" title="Projects">🚀</div>
+                <div class="dock-label">Projects</div>
+            </div>
+            <div class="dock-item-container">
+                <div class="dock-item" data-window="contacts" title="Contacts">📧</div>
+                <div class="dock-label">Contacts</div>
+            </div>
         `;
         
         desktopContent.appendChild(sidebar);

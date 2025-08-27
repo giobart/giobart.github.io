@@ -51,7 +51,7 @@ fetch('pubs.yaml')
       publicationElement.innerHTML = `
       <li class="list-group-item bg-dark">
         <div style="display: none">${publication.category}</div>
-        <div class="card mb-3 bg-dark" style="max-width: 900px;max-height: 350px;">
+        <div class="card mb-3 bg-dark" style="max-width: 900px;">
         <div class="row g-0 align-items-center">
             <div class="col-sm-4">
             <img style="width: 100%;" src="${publication.image}" class="img-fluid rounded-start" alt="publication cover image">

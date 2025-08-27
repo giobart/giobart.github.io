@@ -966,7 +966,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 .visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}
 @media print{.hidden-print{display:none !important}}
 .page-div {
-     /* Sets the minimum height to 100% of the viewport height */
+    /* min-height: 100vh;  Sets the minimum height to 100% of the viewport height */
     padding: 20px; 
     width: 100%;
   }
