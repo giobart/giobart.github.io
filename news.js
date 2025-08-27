@@ -14,7 +14,7 @@ fetch('news.yaml')
 
       newsElement.innerHTML = `
         ${divider}
-        <div class="card mb-3 bg-dark" style="max-width: 700px;">
+        <div class="card mb-3 bg-dark" style="max-height: 400px;">
             <div class="d-flex w-100 justify-content-between">
               <h4 class="mb-1">${news.title}${link}</h4>
               <small class="text-muted">${news.date}</small>

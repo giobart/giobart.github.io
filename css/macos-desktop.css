@@ -1,0 +1,328 @@
+/* macOS Desktop Environment */
+.macos-desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* Desktop Layout */
+.desktop-content {
+    display: flex;
+    height: calc(100vh - 90px); /* Account for menu bar (30px) and dock space (60px) */
+    padding-top: 30px; /* Space for menu bar */
+    padding-bottom: 10px; /* Small space above dock */
+}
+
+.desktop-sidebar {
+    width: 40%;
+    max-width: 600px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-windows {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+}
+
+/* macOS Menu Bar */
+.macos-menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 13px;
+    color: white;
+}
+
+.menubar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menubar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apple-logo {
+    font-size: 16px;
+}
+
+/* macOS Dock */
+.macos-dock {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 8px 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dock-item {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 20px;
+    color: white;
+}
+
+.dock-item:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dock-item.active {
+    background: rgba(255, 255, 255, 0.1) !important; /* Same as normal state, override hacker.css */
+}
+
+.dock-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Window Management */
+.window-container {
+    position: absolute;
+    min-width: 400px;
+    max-width: 90%;
+    min-height: 300px;
+    max-height: 80%;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.window-container.minimized {
+    transform: scale(0.1);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.window-container.maximized {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: calc(100% - 0px) !important;
+    height: calc(100% - 0px) !important;
+    max-width: none;
+    max-height: none;
+}
+
+.window-container.maximized .macos-window {
+    max-width: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+
+.window-container.focused {
+    z-index: 200;
+}
+
+/* Enhanced macOS Window */
+.macos-window {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.macos-titlebar {
+    height: 40px;
+    background: linear-gradient(to bottom, #3c3c3c, #2a2a2a);
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+    cursor: move;
+}
+
+.macos-traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.macos-traffic-light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.macos-traffic-light:hover {
+    transform: scale(1.1);
+}
+
+.macos-traffic-light.close {
+    background: linear-gradient(to bottom, #ff6058, #ff453a);
+}
+
+.macos-traffic-light.minimize {
+    background: linear-gradient(to bottom, #ffbd2e, #ff9500);
+}
+
+.macos-traffic-light.maximize {
+    background: linear-gradient(to bottom, #28ca42, #30d158);
+}
+
+.macos-window-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.macos-content {
+    flex: 1;
+    background-color: #1e1e1e;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+/* Custom scrollbar for macOS look */
+.macos-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.macos-content::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+.macos-content::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.macos-content::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .macos-desktop {
+        display: none !important;
+    }
+    
+    .mobile-view {
+        display: block !important;
+    }
+    
+    .desktop-view {
+        display: none !important;
+    }
+    
+    .desktop-hidden {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-view {
+        display: none !important;
+    }
+    
+    .desktop-view {
+        display: block !important;
+    }
+}
+
+/* Mobile Menu */
+.mobile-navbar {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.mobile-burger {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/* About section styling in desktop */
+.about-content {
+    background: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about-content h2 {
+    color: white;
+}
+
+.about-content a {
+    color: #64b5f6;
+}
+
+.about-content .terminal,
+.about-content #typewriter {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #00ff00 !important;
+    padding: 15px !important;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.about-content .small-img {
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
