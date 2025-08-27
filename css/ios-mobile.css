@@ -67,16 +67,16 @@
     }
 
     .ios-app-header {
-        height: 60px;
+        height: 50px; /* Reduced header height */
         background: rgba(0, 0, 0, 0) !important;
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 15px; /* Reduced padding */
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .ios-app-title {
-        font-size: 18px;
+        font-size: 14px; /* Reduced from 16px */
         font-weight: 600;
         color: #333;
     }
@@ -86,30 +86,31 @@
     }
 
     .ios-app-content {
-        padding: 20px;
-        height: calc(100% - 60px);
-        overflow-y: auto;
+        padding: 10px; /* Reduced padding for mobile */
+        overflow-y: none;
+        font-size: 13px; /* Reduced from 14px */
     }
 
     .ios-app.about .ios-app-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start; /* Changed from center to flex-start for scrolling */
         align-items: center;
         text-align: center;
-        padding: 40px 20px;
+        padding: 10px 10px; /* Reduced top padding from 20px to 10px */
+        overflow-y: auto; /* Ensure scrolling works */
     }
 
     .ios-dock {
-        height: 120px !important;
+        height: 90px !important; /* Reduced from 100px */
         background: rgba(255, 255, 255, 0.2) !important;
         backdrop-filter: blur(20px) !important;
         border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 0 20px !important;
-        gap: 20px !important;
+        padding: 0 12px !important; /* Reduced padding */
+        gap: 12px !important; /* Reduced gap */
         flex-shrink: 0 !important;
         position: fixed !important;
         bottom: 0 !important;
@@ -122,20 +123,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 4px; /* Reduced from 6px */
     }
 
     .ios-dock-item {
-        width: 60px;
-        height: 60px;
+        width: 45px; /* Reduced from 50px */
+        height: 45px; /* Reduced from 50px */
         background: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
+        border-radius: 10px; /* Smaller radius */
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         transition: all 0.2s ease;
-        font-size: 24px;
+        font-size: 18px; /* Reduced from 20px */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
@@ -149,11 +150,11 @@
     }
 
     .ios-dock-label {
-        font-size: 12px;
+        font-size: 9px; /* Reduced from 10px */
         font-weight: 500;
         color: white;
         text-align: center;
-        max-width: 80px;
+        max-width: 50px; /* Reduced to match smaller icons */
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -169,10 +170,15 @@
     .about-content.ios {
         background: rgba(255, 255, 255, 0.1) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
+        padding: 15px; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px 0;
+        margin: 10px 0; /* Reduced margin */
+        margin-bottom: 10em;
+    }
+
+    .about-content.ios a {
+        color: white !important;
     }
 
     .about-content.ios .terminal,
@@ -181,88 +187,93 @@
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         color: #00ff00 !important;
-        padding: 20px !important;
-        margin: 20px 0;
+        padding: 15px !important; /* Reduced padding */
+        margin: 10px 0; /* Reduced margin */
+        font-size: 12px; /* Smaller font for mobile */
     }
 
     .about-content.ios .small-img {
         border-radius: 50%;
         border: 3px solid rgba(255, 255, 255, 0.5);
-        margin-bottom: 20px;
+        margin-bottom: 15px; /* Reduced margin */
+        max-width: 8em !important;
+        height: auto;
     }
 
     .ios-app.news {
         background: rgba(255, 255, 255, 0.4) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px 0;
-        padding-bottom: 10em;
+        padding-bottom: 10em !important; 
     }
 
     .ios-app.publications {
         background: rgba(255, 255, 255, 0.4) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
+        padding: 15px; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px 0;
+        margin: 10px 0; /* Reduced margin */
         color:black !important;
-        padding-bottom: 10em;
+        padding-bottom: 10em; /* Reduced bottom padding */
     }
 
     .ios-app.students {
         background: rgba(255, 255, 255, 0.4) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
+        padding: 15px; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px 0;
+        margin: 10px 0; /* Reduced margin */
         color: black !important;
-        padding-bottom: 10em;
+        padding-bottom: 10em; /* Reduced bottom padding */
     }
 
     .ios-app.projects {
         background: rgba(255, 255, 255, 0.4) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
+        padding: 15px; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px 0;
+        margin: 10px 0; /* Reduced margin */
         color: black !important;
-        padding-bottom: 10em;
+        padding-bottom: 10em; /* Reduced bottom padding */
     }
 
     .ios-app.contacts {
         background: rgba(255, 255, 255, 0.4) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
+        padding: 15px; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 20px 0;
+        margin: 10px 0; /* Reduced margin */
         color: black !important;
+        padding-bottom: 10em; /* Reduced bottom padding */
     }
 
     .ios-app .card {
         background: rgba(128, 126, 126, 0.1) !important;
         backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 30px;
+        border-radius: 15px;
+        padding: 15px !important; /* Reduced padding */
         border: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 20px 0;
+        margin: 10px 0 !important; /* Reduced margin */
         color: black !important;
+        font-size: 14px; /* Smaller font size */
     }
 
     .ios-app .list-group-item {
         background: rgba(0, 0, 0, 0) !important;
         border: none !important;
         color: black !important;
+        padding: 10px !important; /* Reduced padding */
     }
 
     .ios-app .badge {
         background: rgba(70, 156, 222, 0.6) !important;
         color: black !important;
+        font-size: 10px; /* Reduced from 12px */
     }
 
     .ios-app .h5 .a {
@@ -272,7 +283,36 @@
     .ios-app .btn {
         background: rgba(110, 112, 113, 0.6) !important;
         color: black !important;
-        border-radius: 20px;
+        border-radius: 15px;
         border: none !important;
+        padding: 6px 12px !important; /* Reduced from 8px 16px */
+        font-size: 12px; /* Reduced from 14px */
+    }
+
+    /* Make all links black in iOS apps */
+    .ios-app a {
+        color: black !important;
+    }
+
+    .ios-app a:hover {
+        color: #333 !important;
+    }
+
+    .ios-app .card img {
+        object-fit: contain; /* Changed from cover to contain */
+    }
+
+    /* Compact headings on mobile */
+    .ios-app h1, .ios-app h2, .ios-app h3, .ios-app h4, .ios-app h5 {
+        margin-top: 15px !important;
+        margin-bottom: 10px !important;
+        font-size: 1.0em !important; /* Reduced from 1.1em */
+    }
+
+    /* Compact paragraphs */
+    .ios-app p {
+        margin-bottom: 10px !important;
+        line-height: 1.4 !important;
+        font-size: 12px !important; /* Smaller paragraph text */
     }
 }

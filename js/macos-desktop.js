@@ -7,7 +7,7 @@ class MacOSWindowManager {
         this.init();
     }
 
-    init() {
+    initializeMode() {
         if (window.innerWidth <= 768) {
             this.createIOSHomescreen();
         } else {
@@ -17,6 +17,10 @@ class MacOSWindowManager {
         this.setupEventListeners();
         this.updateTime();
         setInterval(() => this.updateTime(), 1000);
+    }
+
+    init() {
+        this.initializeMode();
     }
 
     createIOSHomescreen() {
@@ -135,10 +139,8 @@ class MacOSWindowManager {
                     aboutContainer.innerHTML = ''; // Clear first
                     aboutContainer.appendChild(aboutContent);
                     
-                    // Initialize typewriter effect
-                    setTimeout(() => {
-                        this.initializeTypewriter();
-                    }, 100);
+                    // Initialize typewriter effect with multiple attempts for mobile
+                    this.tryInitializeTypewriter();
                 }
             }
         } else {
@@ -446,23 +448,88 @@ class MacOSWindowManager {
         }
     }
 
+    tryInitializeTypewriter(attempt = 1, maxAttempts = 10) {
+        // Prevent multiple simultaneous initialization attempts
+        if (this.typewriterInitializing) {
+            console.log('Typewriter initialization already in progress');
+            return;
+        }
+        this.typewriterInitializing = true;
+        
+        console.log(`Attempting to initialize typewriter, attempt ${attempt}/${maxAttempts}`);
+        
+        // Find the typewriter element in multiple possible locations
+        let typewriterElement = document.querySelector('.about-content #typewriter');
+        if (!typewriterElement) {
+            typewriterElement = document.querySelector('#ios-about-content #typewriter');
+        }
+        if (!typewriterElement) {
+            typewriterElement = document.querySelector('#ios-about-content .about-content #typewriter');
+        }
+        if (!typewriterElement) {
+            typewriterElement = document.querySelector('#typewriter');
+        }
+        
+        console.log('Typewriter element found:', typewriterElement);
+        console.log('setupTypewriter function available:', typeof setupTypewriter === 'function');
+        
+        if (typewriterElement && typeof setupTypewriter === 'function') {
+            console.log('Setting up typewriter...');
+            try {
+                const typewriter = setupTypewriter(typewriterElement);
+                typewriter.type();
+                console.log('Typewriter initialized successfully!');
+                this.typewriterInitializing = false;
+                return; // Success, exit early
+            } catch (error) {
+                console.error('Error setting up typewriter:', error);
+            }
+        }
+        
+        // If we haven't succeeded and haven't reached max attempts, try again
+        if (attempt < maxAttempts) {
+            setTimeout(() => {
+                this.typewriterInitializing = false;
+                this.tryInitializeTypewriter(attempt + 1, maxAttempts);
+            }, 500); // Wait 500ms between attempts
+        } else {
+            console.log('Failed to initialize typewriter after', maxAttempts, 'attempts');
+            this.typewriterInitializing = false;
+        }
+    }
+
     initializeTypewriter() {
-        // Find the typewriter element in the sidebar
-        const typewriterElement = document.querySelector('.about-content #typewriter');
+        // Find the typewriter element in both desktop sidebar and iOS mobile app
+        let typewriterElement = document.querySelector('.about-content #typewriter');
+        
+        // If not found in desktop sidebar, look in iOS mobile app
+        if (!typewriterElement) {
+            typewriterElement = document.querySelector('#ios-about-content #typewriter');
+        }
+        
+        console.log('Typewriter element found:', typewriterElement);
+        
         if (typewriterElement) {
             // Make sure the setupTypewriter function is available
             if (typeof setupTypewriter === 'function') {
+                console.log('Setting up typewriter...');
                 const typewriter = setupTypewriter(typewriterElement);
                 typewriter.type();
             } else {
+                console.log('setupTypewriter not available, retrying...');
                 // If setupTypewriter isn't available yet, wait a bit and try again
                 setTimeout(() => {
                     if (typeof setupTypewriter === 'function') {
+                        console.log('Setting up typewriter (retry)...');
                         const typewriter = setupTypewriter(typewriterElement);
                         typewriter.type();
+                    } else {
+                        console.log('setupTypewriter still not available');
                     }
                 }, 500);
             }
+        } else {
+            console.log('No typewriter element found');
         }
     }
 

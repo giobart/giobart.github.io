@@ -144,7 +144,7 @@
                     <h2 class="w-100" style="padding-bottom: 1em;">Giovanni Bartolomeo</h2>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="col-md-auto" style="min-width: 25em;">
+                    <div class="col-md-auto" style="min-width: 20em;">
                         <pre id="typewriter" class="bg-dark" style="">Researcher and Ph.D. Candidate
 @  Technical University of Munich
    Chair of Connected Mobility
@@ -404,13 +404,27 @@ Research Intern
             }
         }
 
-        // Only run on mobile or when desktop manager hasn't initialized yet
+        // Only run on mobile if MacOSWindowManager hasn't been instantiated yet
+        // This handles the case of direct mobile loading
         if (window.innerWidth <= 768) {
-            initTypewriter();
+            // Wait a bit to see if MacOSWindowManager gets instantiated
+            setTimeout(() => {
+                if (!window.macOSManager) {
+                    console.log('No macOS manager found, initializing typewriter directly');
+                    initTypewriter();
+                }
+            }, 100);
         }
         </script>
         
         <!-- macOS Desktop Manager -->
         <script src="js/macos-desktop.js"></script>
+        
+        <!-- Initialize desktop manager after all functions are loaded -->
+        <script>
+        if (window.MacOSWindowManager) {
+            window.macOSManager = new MacOSWindowManager();
+        }
+        </script>
     </body>
 </html>
