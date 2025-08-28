@@ -967,7 +967,7 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 @media print{.hidden-print{display:none !important}}
 .page-div {
     /* min-height: 100vh;  Sets the minimum height to 100% of the viewport height */
-    padding: 20px; 
+    padding: 0px; 
     width: 100%;
   }
 .small-img {
@@ -975,5 +975,5 @@ button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-ap
 }
 
 .section{
-    padding: 1em; 
+    padding: 0em; 
   }

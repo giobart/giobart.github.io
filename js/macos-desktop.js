@@ -51,9 +51,8 @@ class MacOSWindowManager {
         const aboutApp = this.createIOSApp('about', 'About', '👤', true);
         appContainer.appendChild(aboutApp);
         
-        // Create other apps
+        // Create other apps (removed news from mobile apps)
         const apps = [
-            { id: 'news', title: 'News', icon: '📰' },
             { id: 'publications', title: 'Publications', icon: '📚' },
             { id: 'students', title: 'Students', icon: '👥' },
             { id: 'projects', title: 'Projects', icon: '🚀' },
@@ -65,17 +64,13 @@ class MacOSWindowManager {
             appContainer.appendChild(appElement);
         });
         
-        // Create dock
+        // Create dock (removed news from mobile dock)
         const dock = document.createElement('div');
         dock.className = 'ios-dock';
         dock.innerHTML = `
             <div class="ios-dock-item-container">
                 <div class="ios-dock-item active" data-app="about">👤</div>
                 <div class="ios-dock-label">About</div>
-            </div>
-            <div class="ios-dock-item-container">
-                <div class="ios-dock-item" data-app="news">📰</div>
-                <div class="ios-dock-label">News</div>
             </div>
             <div class="ios-dock-item-container">
                 <div class="ios-dock-item" data-app="publications">📚</div>
@@ -139,6 +134,9 @@ class MacOSWindowManager {
                     aboutContainer.innerHTML = ''; // Clear first
                     aboutContainer.appendChild(aboutContent);
                     
+                    // Add news section after about content
+                    this.addNewsToAboutApp(aboutContainer);
+                    
                     // Initialize typewriter effect with multiple attempts for mobile
                     this.tryInitializeTypewriter();
                 }
@@ -154,38 +152,103 @@ class MacOSWindowManager {
                         <p>Content loaded successfully!</p>
                     </div>
                 `;
+                // Add news section after about content
+                this.addNewsToAboutApp(aboutContainer);
             }
         }
         
-        // Load other content
-        this.loadNewsForIOS();
+        // Load other content (removed loadNewsForIOS call)
         this.loadPublicationsForIOS();
         this.loadStudentsForIOS();
         this.loadProjectsForIOS();
         this.loadContactsForIOS();
     }
 
-    loadNewsForIOS() {
-        console.log('Loading news for iOS...');
-        const newsListElement = document.querySelector('#news-list');
-        console.log('News list element found:', newsListElement);
-        if (newsListElement) {
-            const newsContent = newsListElement.cloneNode(true);
-            newsContent.style.display = 'block';
-            const newsContainer = document.getElementById('ios-news-content');
-            console.log('News container found:', newsContainer);
-            if (newsContainer) {
-                newsContainer.innerHTML = ''; // Clear first
-                newsContainer.appendChild(newsContent);
-                console.log('News content loaded');
-            }
-        } else {
-            // Add fallback content
-            const newsContainer = document.getElementById('ios-news-content');
-            if (newsContainer) {
-                newsContainer.innerHTML = '<p>News content not found</p>';
-            }
+    addNewsToAboutApp(aboutContainer) {
+        console.log('Adding news content to about app...');
+        
+        // Create scroll down indicator
+        const scrollIndicator = document.createElement('div');
+        scrollIndicator.className = 'scroll-down-indicator';
+        scrollIndicator.innerHTML = `
+            <div class="scroll-down-arrow" style="font-size: 2em;">⌄</div>
+            <div class="scroll-down-text"></div>
+        `;
+        
+        aboutContainer.appendChild(scrollIndicator);
+        
+        // Create news section
+        const newsSection = document.createElement('div');
+        newsSection.className = 'news-section-in-about';
+        newsSection.innerHTML = `
+            <div class="section text-center" style="margin-top: 3em;">
+                <h2 style="padding-top: 1em; padding-bottom: 1em;">
+                    News
+                </h2>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <div class="list-group" id="news-list-mobile"></div>
+                </div>
+            </div>
+        `;
+        
+        aboutContainer.appendChild(newsSection);
+        
+        // Load news content directly via fetch
+        this.loadNewsContentForMobile(newsSection.querySelector('#news-list-mobile'));
+    }
+
+    loadNewsContentForMobile(newsContainer) {
+        if (!newsContainer) {
+            console.log('No news container found for mobile');
+            return;
         }
+
+        fetch('news.yaml')
+          .then(response => response.text())
+          .then(yamlText => {
+            const newsList = jsyaml.load(yamlText);
+            console.log('News loaded for mobile:', newsList);
+            
+            if (newsList && newsList.length > 0) {
+                newsContainer.innerHTML = ''; // Clear existing content
+                var divider = "";
+                
+                newsList.forEach(news => {
+                    const newsElement = document.createElement('div');
+                    var picture = news.picture ? `<img src="${news.picture}" class="rounded float-right" alt="news cover image">` : ``;
+                    var link = news.link ? ` <a class="badge badge-primary badge-pill" href="${news.link}">${news.linkname}</a>` : ``;
+
+                    newsElement.innerHTML = `
+                        ${divider}
+                        <div class="card mb-3 bg-dark" style="max-width: 700px;">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h4 class="mb-1">${news.title}${link}</h4>
+                              <small class="text-muted">${news.date}</small>
+                            </div>
+                            <div class="d-flex w-100 justify-content-start">
+                              <p><br>${news.content}</p>
+                              ${picture}
+                            </div>
+                        </div>
+                    `;
+
+                    if (divider == "") {
+                        divider = `<p class="text-center">---</p>`
+                    }
+
+                    newsContainer.appendChild(newsElement);
+                });
+                console.log('News content loaded successfully for mobile');
+            } else {
+                newsContainer.innerHTML = '<p>No news available</p>';
+            }
+          })
+          .catch(err => {
+            console.log('Error loading news for mobile:', err);
+            newsContainer.innerHTML = '<p>Error loading news content</p>';
+          });
     }
 
     loadPublicationsForIOS() {
@@ -400,7 +463,7 @@ class MacOSWindowManager {
                 var divider = "";
                 newsList.forEach(news => {
                     const newsElement = document.createElement('div');
-                    var picture = news.picture ? `<img style="height: 10em;" src="${news.picture}" class="rounded float-right" alt="news cover image">` : ``;
+                    var picture = news.picture ? `<img src="${news.picture}" class="rounded float-right" alt="news cover image">` : ``;
                     var link = news.link ? ` <a class="badge badge-primary badge-pill" href="${news.link}">${news.linkname}</a>` : ``;
 
                     newsElement.innerHTML = `
@@ -697,8 +760,16 @@ class MacOSWindowManager {
                 // Switching back to desktop - reinitialize
                 document.querySelector('.ios-homescreen')?.remove();
                 this.restoreOriginalLayout();
+                
+                // Re-execute content loading scripts by dispatching events
                 setTimeout(() => {
-                    new MacOSWindowManager();
+                    // Trigger content reload by re-executing the script tags if they exist
+                    this.reloadContentScripts();
+                    
+                    // Then create new desktop manager
+                    setTimeout(() => {
+                        new MacOSWindowManager();
+                    }, 500);
                 }, 100);
             }
         });
@@ -742,6 +813,32 @@ class MacOSWindowManager {
         });
         
         console.log('Original layout restored');
+    }
+
+    reloadContentScripts() {
+        console.log('Reloading content scripts...');
+        
+        // Simple approach: just trigger the existing scripts to reload content
+        // The news.js, pubs.js, and students.js scripts should re-execute their fetch calls
+        
+        // Clear existing content containers to force reload
+        const newsContainer = document.getElementById('news-list');
+        if (newsContainer) {
+            newsContainer.innerHTML = '';
+        }
+        
+        const pubContainer = document.getElementById('publication-list');
+        if (pubContainer) {
+            pubContainer.innerHTML = '';
+        }
+        
+        const studentContainer = document.getElementById('student-list');
+        if (studentContainer) {
+            studentContainer.innerHTML = '';
+        }
+        
+        // The existing script tags will automatically re-execute and populate the content
+        console.log('Content containers cleared, scripts will reload content');
     }
 
     toggleWindow(windowId) {

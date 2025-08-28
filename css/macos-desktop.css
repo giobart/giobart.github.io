@@ -345,3 +345,9 @@
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
+
+/* News images in desktop mode - only in news list */
+#news-content #news-list .card img {
+    max-height: 10em !important;
+    object-fit: contain;
+}
