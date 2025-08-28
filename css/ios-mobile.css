@@ -371,7 +371,7 @@
     }
 
     .ios-app .card .text-muted {
-        color: rgba(68, 67, 67, 1) !important;
+        color: rgb(19, 41, 69) !important;
     }
 
     /* Compact headings on mobile */
@@ -393,7 +393,7 @@
         text-align: center !important;
     }
 
-    .ios-app .text-muted {
+    .ios-app .small {
         color: rgba(255, 255, 255, 0.6) !important;
     }
 

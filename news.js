@@ -17,7 +17,7 @@ fetch('news.yaml')
         <div class="card mb-3" style="max-height: 400px;">
             <div class="d-flex w-100 justify-content-between">
               <h4 class="mb-1">${news.title}${link}</h4>
-              <small class="text-muted">${news.date}</small>
+              <small>${news.date}</small>
             </div>
             <div class="d-flex w-100 justify-content-start">
               <p><br>${news.content}</p>
