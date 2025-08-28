@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #000000;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
     overflow: hidden;
 }
 
@@ -39,8 +39,10 @@
     left: 0;
     right: 0;
     height: 30px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -72,28 +74,32 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(20px);
-    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-radius: 20px;
     padding: 8px 16px;
     display: flex;
-    gap: 20px;
+    gap: 26px;
     z-index: 1000;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .dock-item {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    font-size: 22px;
     position: relative;
-    font-size: 20px;
     color: white;
 }
 
@@ -102,6 +108,7 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    max-width: 45px;
 }
 
 .dock-label {
@@ -117,7 +124,7 @@
 }
 
 .dock-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     background: rgba(255, 255, 255, 0.2);
 }
 
@@ -155,12 +162,12 @@
 }
 
 .window-container.maximized {
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: calc(100% - 0px) !important;
-    height: calc(100% - 0px) !important;
+    top: 3em !important;
+    left: 3em !important;
+    right: 3em !important;
+    bottom: 3em !important;
+    width: calc(100% - 6em) !important;
+    height: calc(100% - 6em) !important;
     max-width: none;
     max-height: none;
 }
@@ -319,6 +326,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 100%;
+    max-height: 1000px;
+    overflow-y: auto;
 }
 
 .about-content h2 {
@@ -351,3 +361,78 @@
     max-height: 10em !important;
     object-fit: contain;
 }
+
+/* iOS-style cards for desktop windows */
+.macos-content .card {
+    background: rgba(224, 221, 221, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 0 !important;
+    color: white !important;
+    font-size: 14px;
+}
+
+.macos-content .btn {
+        background: rgba(31, 54, 81, 0.8)!important;
+        color: white !important;
+        border-radius: 15px;
+        border: 1px solid rgba(183, 183, 183, 0.5) !important;
+        padding: 6px 12px !important; /* Reduced from 8px 16px */
+        font-size: 12px; /* Reduced from 14px */
+    }
+
+.macos-content .btn:hover {
+        transform: scale(1.2);
+    }
+
+.macos-content .list-group-item {
+    border: 0px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 8px 0 !important;
+    color: white !important;
+    background: transparent !important;
+}
+
+.macos-content .list-group {
+    background: transparent !important;
+}
+
+/* Ensure text readability in desktop windows */
+.macos-content h1, .macos-content h2, .macos-content h3, .macos-content h4, .macos-content h5, .macos-content h6 {
+    color: white !important;
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+}
+
+.macos-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.6;
+}
+
+.macos-content a {
+    color: #4a90e2 !important;
+}
+
+.macos-content a:hover {
+    color: #2a5298 !important;
+}
+
+/* Badge styling for desktop */
+.macos-content .badge {
+    background: rgba(31, 54, 81, 0.8) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.macos-content .badge:hover {
+    background: rgba(42, 82, 152, 0.9) !important;
+    color: white !important;
+}
+
+.macos-content .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+

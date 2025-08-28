@@ -235,7 +235,7 @@ class MacOSWindowManager {
                     `;
 
                     if (divider == "") {
-                        divider = `<p class="text-center">---</p>`
+                        divider = `<p class="text-center"></p>`
                     }
 
                     newsContainer.appendChild(newsElement);
@@ -481,7 +481,7 @@ class MacOSWindowManager {
                     `;
 
                     if (divider == "") {
-                        divider = `<p class="text-center">---</p>`
+                        divider = `<p class="text-center"></p>`
                     }
 
                     newsContainer.appendChild(newsElement);

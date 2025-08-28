@@ -315,7 +315,7 @@
     }
 
     .ios-app .card {
-        background: rgba(224, 221, 221, 0.1) !important;
+        background: rgba(224, 221, 221, 0.2) !important;
         backdrop-filter: blur(10px);
         border-radius: 15px;
         padding: 15px !important; /* Reduced padding */
@@ -333,8 +333,14 @@
     }
 
     .ios-app .badge {
-        background: rgba(70, 156, 222, 0.6) !important;
-        color: black !important;
+        background: rgba(3, 83, 144, 0.851) !important;
+        border: 1px solid rgba(197, 195, 195, 0.807);
+        color: white !important;
+        font-size: 10px; /* Reduced from 12px */
+    }
+
+    .ios-app .badge:hover {
+        color: white !important;
         font-size: 10px; /* Reduced from 12px */
     }
 
@@ -364,6 +370,10 @@
         object-fit: contain; /* Changed from cover to contain */
     }
 
+    .ios-app .card .text-muted {
+        color: rgba(68, 67, 67, 1) !important;
+    }
+
     /* Compact headings on mobile */
     .ios-app h1, .ios-app h2, .ios-app h3, .ios-app h4, .ios-app h5 {
         margin-top: 15px !important;
@@ -377,4 +387,18 @@
         line-height: 1.4 !important;
         font-size: 12px !important; /* Smaller paragraph text */
     }
+
+    /* Ensure about section text is centered */
+    .ios-app.about p {
+        text-align: center !important;
+    }
+
+    .ios-app .text-muted {
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .ios-app.about .about-content p {
+        text-align: center !important;
+    }
+
 }
