@@ -1,4 +1,14 @@
 
+- title: 'Enabling Virtualized Cloud Gaming at the Edge'
+  category: 'ba-thesis'
+  author: Philipp Kleber
+  publication_date: 9/2025
+  journal_title: BA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '63'
+  image: ./pdf/covers/Philipp_Kleber_Enabling_Virtualized_Cloud_Gaming_at_the_Edge.png
+  pdf_url: ./pdf/Philipp_Kleber_Enabling_Virtualized_Cloud_Gaming_at_the_Edge.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1754481730739
 - title: 'Telemetry Driven Network Optimization for Edge-Cloud Orchestration Frameworks'
   category: 'ma-thesis'
   author: Simon Zelenski
