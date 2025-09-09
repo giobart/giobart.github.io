@@ -8,6 +8,7 @@
   lastpage: '1500'
   image: ./pdf/covers/ATC25-Bartolomeo-On-Demand-Container-Partitioning-for-Distributed-ML.png
   pdf_url: ./pdf/ATC25-Bartolomeo-On-Demand-Container-Partitioning-for-Distributed-ML.pdf
+  presentation: https://www.youtube.com/watch?v=H9PncfSTXzY
   badges: 
     - ./badges/usenix-available.png
     - ./badges/usenix-functional.png
