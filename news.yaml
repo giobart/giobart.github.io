@@ -1,9 +1,9 @@
-- title: "💼 We're hiring"
+- title: "📄 Accepted Paper @ ACM CoNEXT ECCAI '25 Workshop "
   date:  '27/8/2025'
-  content: "We're looking for a Student Assistant (HiWi) to join our team! Please take a look at the job posting for more details."
-  link: 'pdf/HiWi-opening-sep-2025.pdf'
-  linkname: 'job posting 🔗'
-  picture: 'img/news/hiring.png'
+  content: "Our paper 'Comparative Performance and Cost Analysis of Computer Vision in Edge-Cloud Continuum' has been accepted at the ACM CoNEXT Workshop Edge-Cloud Collaboration for AI (ECCAI '25)."
+  link: '/pdf/Comparative_Performance_and_Cost_Analysis_of_Computer_Vision_in_Edge-Cloud_Continuum.pdf'
+  linkname: 'article 🔗'
+  picture: 'img/news/eccai-2025.png'
 - title: '🎖️ Artifacts Reproduced @ Usenix ATC 2025'
   date:  '1/5/2025'
   content: "Our paper, On-Demand Container Partitioning for Distributed ML, has been awarded the artifacts available, functional, and reproduced badges."
