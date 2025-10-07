@@ -1,3 +1,13 @@
+- title: 'Comparative Performance and Cost Analysis of Computer Vision in Edge-Cloud Continuum'
+  category: 'publication'
+  author: Hongyu Guo, Navidreza Asadi, Giovanni Bartolomeo, Patrick Laufer, Jörg Ott, Wolfgang Kellerer
+  publication_date: 12/2025
+  doi: https://doi.org/10.1145/3769696.3771218
+  journal_title: Proceedings of the 2025 ACM CoNEXT Workshop Edge-Cloud Collaboration for AI (ECCAI '25)
+  firstpage: '1'
+  lastpage: '8'
+  image: ./pdf/covers/Comparative_Performance_and_Cost_Analysis_of_Computer_Vision_in_Edge-Cloud_Continuum.png
+  pdf_url: ./pdf/Comparative_Performance_and_Cost_Analysis_of_Computer_Vision_in_Edge-Cloud_Continuum.pdf
 - title: 'On-Demand Container Partitioning for Distributed ML'
   category: 'publication'
   author: Giovanni Bartolomeo, Navidreza Asadi, Wolfgang Kellerer, Jörg Ott, Nitinder Mohan 
