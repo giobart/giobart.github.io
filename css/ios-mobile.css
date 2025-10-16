@@ -41,8 +41,8 @@
         transform: translateX(100%);
         transition: transform 0.3s ease;
         overflow-y: auto;
-        border-radius: 20px 20px 0 0;
-        margin-top: 10px;
+        border-radius: 0px 0px 0 0 !important;
+        margin-top: 0px !important;
     }
 
     .ios-app.active {
@@ -161,13 +161,14 @@
         background: rgba(255, 255, 255, 0.15) !important;
         backdrop-filter: blur(30px) saturate(180%) !important;
         -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
-        border-radius: 25px 25px 0 0 !important;
+        border-radius: 25px 25px 25px 25px !important;
         border: 1px solid rgba(255, 255, 255, 0.18) !important;
-        border-bottom: none !important;
+        /* border-bottom: none !important; */
+        margin-bottom: 10px;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        padding: 0 20px !important;
+        padding: 0 25px !important;
         gap: 15px !important;
         flex-shrink: 0 !important;
         position: fixed !important;
@@ -198,7 +199,7 @@
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-        font-size: 20px;
+        font-size: 40px;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 
                     0 2px 8px rgba(0, 0, 0, 0.06),
                     inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
