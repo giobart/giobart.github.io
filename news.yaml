@@ -1,3 +1,9 @@
+- title: "📄 Accepted Poster @ ACM CoNEXT '25 "
+  date:  '1/11/2025'
+  content: "Our poster 'KUT: Towards Lightweight On-path Network Assessment for Edge Orchestration' has been accepted at the 21st International Conference on emerging Networking EXperiments and Technologies 2025."
+  link: '/pdf/CoNEXT_25_Poster___KUT.pdf'
+  linkname: 'article 🔗'
+  picture: 'img/news/kut-measurements.png'
 - title: "📄 Accepted Paper @ ACM CoNEXT ECCAI '25 Workshop "
   date:  '27/8/2025'
   content: "Our paper 'Comparative Performance and Cost Analysis of Computer Vision in Edge-Cloud Continuum' has been accepted at the ACM CoNEXT Workshop Edge-Cloud Collaboration for AI (ECCAI '25)."
