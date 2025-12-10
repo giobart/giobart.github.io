@@ -1,4 +1,14 @@
 
+- title: 'Service Placement through Hierarchical Scheduling at the Edge'
+  category: 'ba-thesis'
+  author: Matthew David Humphreys
+  publication_date: 12/2025
+  journal_title: BA thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '63'
+  image: ./pdf/covers/Service_Placement_through_Hierarchical_Scheduling_at_the_Edge.png
+  pdf_url: ./pdf/Service_Placement_through_Hierarchical_Scheduling_at_the_Edge.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/recording/43029df94cc085c4fbc2063bc08c0549bab493cd-1765375746733/presentation?token=f912cfc5a75210636b494d10c26db2a56491feb60fb591bb0f93f309080fac1e
 - title: 'Enabling Virtualized Cloud Gaming at the Edge'
   category: 'ba-thesis'
   author: Philipp Kleber
