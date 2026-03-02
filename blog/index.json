@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "from-research-to-growing-community",
+    "title": "Oakestra: From Research Idea to a Growing Community",
+    "date": "Dec 2025",
+    "excerpt": "What an exceptional year for Oakestra! Between new research directions, new publications, and prestigious awards, the project has reached incredible milestones. But more importantly, our community is growing stronger every day thanks to amazing people. ",
+    "tags": ["oakestra", "community", "edge computing"]
+  },
+  {
+    "slug": "on-demand-container-partitioning",
+    "title": "On-Demand Container Partitioning: How We Made Distributed ML More Efficient",
+    "date": "July 2025",
+    "excerpt": "A behind-the-scenes look at the ideas behind our USENIX ATC '25 paper on on-demand container partitioning for distributed ML workloads.",
+    "tags": ["containers", "distributed ML", "edge computing"]
+  }
+]

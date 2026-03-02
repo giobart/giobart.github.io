@@ -1,81 +1,98 @@
+/* ── Filter ─────────────────────────────────────────────── */
 function filterPubList(filter) {
-  // Declare variables
-  var ul, li, i, txtValue;
-  ul = document.getElementById("publication-list");
-  li = ul.getElementsByTagName('li');
+  const items = document.querySelectorAll('#publication-list li[data-category]');
+  items.forEach(item => {
+    const cat = item.dataset.category || '';
+    item.style.display = (!filter || cat.includes(filter)) ? '' : 'none';
+  });
+}
 
-  // Loop through all list items, and hide those who don't match the filter
-  for (i = 0; i < li.length; i++) {
-    category = li[i].getElementsByTagName("div")[0];
-    txtValue = category.textContent || category.innerText;
-    if (txtValue.includes(filter)) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
+/* ── Inject Google Scholar citation meta tags ────────────── */
+function injectCitationMeta(pub) {
+  const add = (name, content) => {
+    if (!content) return;
+    const m = document.createElement('meta');
+    m.name = name;
+    m.content = content;
+    document.head.appendChild(m);
+  };
+  add('citation_title',            pub.title);
+  add('citation_journal_title',    pub.journal_title);
+  add('citation_publication_date', pub.publication_date);
+  add('citation_firstpage',        pub.firstpage);
+  add('citation_lastpage',         pub.lastpage);
+  add('citation_pdf_url',          pub.pdf_url ? location.origin + '/' + pub.pdf_url.replace(/^\.\//, '') : null);
+  if (pub.doi)    add('citation_doi', pub.doi.replace(/^https?:\/\/doi\.org\//, ''));
+  if (pub.author) {
+    pub.author.split(',').forEach(a => add('citation_author', a.trim()));
   }
 }
 
+/* ── Render ─────────────────────────────────────────────── */
 fetch('pubs.yaml')
-  .then(response => response.text())
+  .then(r => r.text())
   .then(yamlText => {
     const publications = jsyaml.load(yamlText);
+    const list = document.getElementById('publication-list');
 
-    const publicationListContainer = document.getElementById('publication-list');
+    publications.forEach(pub => {
+      // Inject scholar meta tags
+      injectCitationMeta(pub);
 
-    publications.forEach(publication => {
-      const publicationElement = document.createElement('div');
-
-      // Check the publication awards
-      var awards = ''
-      if (publication.awards && publication.awards.length > 0) {
-        for (var i = 0; i < publication.awards.length; i++) {
-          awards += `<span class="badge badge-primary badge-pill" itemprop="award" style="background-color: yellow; color: black"> 🏆 ${publication.awards[i]} </span>`;
-        }
+      // Awards
+      let awards = '';
+      if (pub.awards?.length) {
+        awards = pub.awards.map(a =>
+          `<span class="award-badge" itemprop="award">🏆 ${a}</span>`
+        ).join('');
       }
 
-      // Check presentation video available
-      var video = publication.presentation ? `<a class="btn btn-primary" href="${publication.presentation}" target="_blank"><span class="bi bi-camera-video"></span> Presentation</a>` : ` `;
-      
-      // Check ig DOI available
-      var link = publication.doi ? `href="${publication.doi}"` : `disabled`;
-      
-      // Add badges
-      var badges = ``
-      if (publication.badges) {
-        publication.badges.forEach(badge => {
-          badges+=`<img style="width: 5em" src="${badge}" class="img-fluid rounded-start" alt="publication badge">`
-        })
-        badges+=`<br><br>`
+      // Artifact badges
+      let badges = '';
+      if (pub.badges?.length) {
+        badges = pub.badges.map(b =>
+          `<img class="artifact-badge" src="${b}" alt="artifact badge">`
+        ).join('');
       }
-      publicationElement.innerHTML = `
-      <li class="list-group-item bg-dark">
-        <div style="display: none">${publication.category}</div>
-        <div class="card mb-3 bg-dark" style="max-width: 900px;">
-        <div class="row g-0 align-items-center">
-            <div class="col-sm-4">
-            <img style="width: 100%;" src="${publication.image}" class="img-fluid rounded-start" alt="publication cover image">
+
+      // Buttons
+      const pdfBtn   = pub.pdf_url ? `<a class="btn btn-primary" href="${pub.pdf_url}" target="_blank" rel="noopener">PDF</a>` : '';
+      const videoBtn = pub.presentation ? `<a class="btn" href="${pub.presentation}" target="_blank" rel="noopener">▶ Presentation</a>` : '';
+      const doiAttr  = pub.doi ? `href="${pub.doi}"` : '';
+
+      // Cover image fallback
+      const cover = pub.image
+        ? `<img class="pub-cover" src="${pub.image}" alt="Cover of ${pub.title}" loading="lazy">`
+        : `<div class="pub-cover" style="background:var(--surface-2)"></div>`;
+
+      const li = document.createElement('li');
+      li.dataset.category = pub.category || '';
+      li.innerHTML = `
+        <div class="pub-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+          ${cover}
+          <div class="pub-body">
+            <div class="pub-title">
+              <a itemprop="name" ${doiAttr} target="_blank" rel="noopener">${pub.title}</a>
             </div>
-            <div class="col-md-8">
-            <div class="card-body" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                <h5 class="card-title"> <b> <a itemprop="name" ${link}> ${publication.title} </a> </b></h5>
-                <p class="card-text" >Authors: <span itemprop="author"> ${publication.author} </span></p>
-                <p class="card-text"> <span itemprop="publication"> ${publication.journal_title} </span></p>
-                ${awards}
-                <p class="card-text">Pages: <span itemprop="pageStart">${publication.firstpage}</span>-<span itemprop="pageEnd">${publication.lastpage}</span></p>
-                <p class="card-text"><small class="text-muted">Date: <span itemprop="datePublished">${publication.publication_date}</span></small></p>
-                <a itemprop="url" ${publication.doi}></a>
-                <a itemprop="sameAs" ${publication.doi}></a>
-                ${badges}
-                <a class="btn btn-primary" href="${publication.pdf_url}" target="_blank"><span class="bi bi-file-pdf"></span>PDF</a>
-                ${video}
+            <div class="pub-authors">
+              <span itemprop="author">${pub.author || ''}</span>
             </div>
+            <div class="pub-venue" itemprop="isPartOf">${pub.journal_title || ''}</div>
+            <div class="pub-meta">
+              <span itemprop="datePublished">${pub.publication_date || ''}</span>
+              &nbsp;·&nbsp; pp.&nbsp;<span itemprop="pageStart">${pub.firstpage || ''}</span>–<span itemprop="pageEnd">${pub.lastpage || ''}</span>
             </div>
+            <link itemprop="url"    href="${pub.doi || ''}">
+            <link itemprop="sameAs" href="${pub.doi || ''}">
+            <div class="pub-footer">
+              ${awards}
+              ${badges}
+              ${pdfBtn}
+              ${videoBtn}
+            </div>
+          </div>
         </div>
-        </div>
-      </li>
       `;
-
-      publicationListContainer.appendChild(publicationElement);
+      list.appendChild(li);
     });
   });
