@@ -1,3 +1,23 @@
+- title: 'Poster: KUT: Towards Lightweight On-path Network Assessment for Edge Orchestration'
+  category: 'publication'
+  author: Wei Geng, Oguz Kagan Altas, David Guzman, Giovanni Bartolomeo, Nitinder Mohan, Jörg Ott
+  publication_date: 12/2025
+  doi: https://doi.org/10.1145/3765515.3771746
+  journal_title: Proceedings of the 21st International Conference on emerging Networking EXperiments and Technologies
+  firstpage: '9'
+  lastpage: '11'
+  image: ./pdf/covers/CoNEXT_25_Poster___KUT.png
+  pdf_url: ./pdf/CoNEXT_25_Poster___KUT.pdf
+- title: 'Comparative Performance and Cost Analysis of Computer Vision in Edge-Cloud Continuum'
+  category: 'publication'
+  author: Hongyu Guo, Navidreza Asadi, Giovanni Bartolomeo, Patrick Laufer, Jörg Ott, Wolfgang Kellerer
+  publication_date: 12/2025
+  doi: https://doi.org/10.1145/3769696.3771218
+  journal_title: Proceedings of the 2025 ACM CoNEXT Workshop Edge-Cloud Collaboration for AI (ECCAI '25)
+  firstpage: '1'
+  lastpage: '8'
+  image: ./pdf/covers/Comparative_Performance_and_Cost_Analysis_of_Computer_Vision_in_Edge-Cloud_Continuum.png
+  pdf_url: ./pdf/Comparative_Performance_and_Cost_Analysis_of_Computer_Vision_in_Edge-Cloud_Continuum.pdf
 - title: 'On-Demand Container Partitioning for Distributed ML'
   category: 'publication'
   author: Giovanni Bartolomeo, Navidreza Asadi, Wolfgang Kellerer, Jörg Ott, Nitinder Mohan 
@@ -8,6 +28,7 @@
   lastpage: '1500'
   image: ./pdf/covers/ATC25-Bartolomeo-On-Demand-Container-Partitioning-for-Distributed-ML.png
   pdf_url: ./pdf/ATC25-Bartolomeo-On-Demand-Container-Partitioning-for-Distributed-ML.pdf
+  presentation: https://www.youtube.com/watch?v=H9PncfSTXzY
   badges: 
     - ./badges/usenix-available.png
     - ./badges/usenix-functional.png
