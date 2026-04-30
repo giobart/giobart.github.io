@@ -207,7 +207,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 section {
   padding-top: 4rem;  padding-bottom: 3rem;  margin-top: -4rem;   /* offset for sticky nav highlight */
 }
-section + section { border-top: 1px solid var(--border); }
 
 .section-title {
   font-size: 1.35rem;
@@ -544,17 +543,20 @@ section + section { border-top: 1px solid var(--border); }
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
+  justify-content: center;
   transition: border-color var(--transition);
+  height: 7em;
 }
 
 .project-card:has(.project-logo-small) {
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .project-logo {
   max-height: 5rem;
-  max-width: 13rem;
+  max-width: 14rem;
   margin-left: auto;
   margin-right: auto;
   display: block;
