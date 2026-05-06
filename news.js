@@ -12,7 +12,7 @@ fetch('news.yaml')
         ? `<a class="btn btn-primary" href="${news.link}" target="_blank" rel="noopener" style="margin-top:0.5rem">${news.linkname || 'Read more'}</a>`
         : '';
       const picture = news.picture
-        ? `<img src="${news.picture}" alt="News image" loading="lazy" style="max-width:320px; border-radius:6px; border:1px solid var(--border); margin-top:0.6rem;">`
+        ? `<img src="${news.picture}" alt="News image" loading="lazy" style="max-width:320px; max-height:250px; border-radius:6px; border:1px solid var(--border); margin-top:0.6rem;">`
         : '';
 
       const row = document.createElement('div');
