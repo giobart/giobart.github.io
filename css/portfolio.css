@@ -560,6 +560,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  object-fit: contain;
 }
 
 .project-logo-small {
@@ -567,6 +568,7 @@ section {
   width: 6rem;
   margin-left: 0;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .project-title {
@@ -780,6 +782,7 @@ footer {
     height: auto;
     box-sizing: border-box;
   }
+  .project-card { height: auto; min-height: 5.5em; }
 }
 
 @media (max-width: 520px) {
@@ -796,6 +799,7 @@ footer {
   .awards-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .project-card { height: auto; min-height: 6em; }
 }
 
 /* ── Scrollbar styling ────────────────────────────────────── */
