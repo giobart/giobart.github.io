@@ -1,9 +1,19 @@
 
+- title: 'Evaluation of Live Migration Strategies at the Edge'
+  category: 'ba-thesis'
+  author: Ivo Raimondi
+  publication_date: 07/2026
+  journal_title: Bachelor's thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '156'
+  image: ./pdf/covers/cover-BT-Ivo-Raimondi.png
+  pdf_url: ./pdf/BT-Ivo-Raimondi.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/video/43029df94cc085c4fbc2063bc08c0549bab493cd-1781698607530/
 - title: 'Service Placement through Hierarchical Scheduling at the Edge'
   category: 'ba-thesis'
   author: Matthew David Humphreys
   publication_date: 12/2025
-  journal_title: BA thesis. Technical University Munich
+  journal_title: Bachelor's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '55'
   image: ./pdf/covers/Service_Placement_through_Hierarchical_Scheduling_at_the_Edge.png
@@ -13,7 +23,7 @@
   category: 'ba-thesis'
   author: Philipp Kleber
   publication_date: 9/2025
-  journal_title: BA thesis. Technical University Munich
+  journal_title: Bachelor's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '63'
   image: ./pdf/covers/Philipp_Kleber_Enabling_Virtualized_Cloud_Gaming_at_the_Edge.png
@@ -23,7 +33,7 @@
   category: 'ma-thesis'
   author: Simon Zelenski
   publication_date: 7/2025
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '112'
   image: ./pdf/covers/MT-Simon-Zelenski.png
@@ -33,7 +43,7 @@
   category: 'ma-thesis'
   author: Hongyu Guo
   publication_date: 6/2025
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '65'
   image: ./pdf/covers/A_Comparative_Analysis_of_a_CNN_Model_Deployment_on_Amazon_Web_Services.png
@@ -52,7 +62,7 @@
   category: 'ma-thesis'
   author: Ben Julian Riegel
   publication_date: 9/2024
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '57'
   image: ./pdf/covers/BenRiegel_MT.png
@@ -62,7 +72,7 @@
   category: 'ma-thesis'
   author: Alexander Malyuk
   publication_date: 9/2024
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '152'
   image: ./pdf/covers/AlexanderMalyuk_MT.png
@@ -72,7 +82,7 @@
   category: 'ma-thesis'
   author: Mahmoud Elkodary
   publication_date: 9/2024
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '45'
   image: ./pdf/covers/Mahmoud_EkKodary_MT.png
@@ -82,7 +92,7 @@
   category: 'ma-thesis'
   author: Jackob Kempter
   publication_date: 6/2024
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '84'
   image: ./pdf/covers/Next-Generation-Orchestration-Frameworks-for-Multicluster-Cloud-Edge-Integration.png
@@ -92,7 +102,7 @@
   category: 'ma-thesis'
   author: Michael Schlicker
   publication_date: 12/2023
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '70'
   image: ./pdf/covers/Multicloud-Infrastructure-Broker-for-Edge-Orchestration-Framework.png
@@ -101,7 +111,7 @@
   category: 'ma-thesis'
   author: Patrick Sabanic
   publication_date: 12/2022
-  journal_title: MA thesis. Technical University Munich
+  journal_title: Master's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '77'
   image: ./pdf/covers/Supporting-Unikernel-based-Microservices-at-the-Edge.png
@@ -110,7 +120,7 @@
   category: 'ba-thesis'
   author: Maria Nievas Viñals
   publication_date: 09/2022
-  journal_title: BA thesis. Technical University Munich
+  journal_title: Bachelor's thesis. Technical University Munich
   firstpage: '1'
   lastpage: '48'
   image: ./pdf/covers/Designing-Interaction-Framework-for-Multi-Admin-Edge-Infrastructures.png
