@@ -1,3 +1,12 @@
+- title: "🌳 Oakverse @ 6G Conference Berlin"
+  date:  '10/9/2026'
+  content: "Come and visit us at the 6G Conference in Berlin! In our booth we will showcase how Oakverse solutions can enable edge-cloud collaboration supporting live offloading of mobile applications and services."
+  link: 'https://oakverse.systems'
+  linkname: 'Oakverse🔗'
+  picture: 'img/news/Oakverse.png'
+- title: "📄 Accepted Poster @ SOSP'26 "
+  date:  '23/07/2026'
+  content: "The poster 'Fast Container Image Distribution and In-Place Updates' has been accepted at the 32nd Symposium on Operating Systems Principles."
 - title: "🌳 Oakverse @ FNS Partner's Event 2026"
   date:  '21/5/2026'
   content: "A lot of insightful interactions took place at our booth at the Future Network Services (FNS) Partner's Event in Hilversum. We presented Oakverse and its potential applications in the context of 6G networks."
@@ -12,19 +21,19 @@
   picture: 'img/news/SPEAR-lab.jpg'
 - title: "📄 Accepted Poster @ ACM CoNEXT '25 "
   date:  '1/11/2025'
-  content: "Our poster 'KUT: Towards Lightweight On-path Network Assessment for Edge Orchestration' has been accepted at the 21st International Conference on emerging Networking EXperiments and Technologies 2025."
+  content: "The poster 'KUT: Towards Lightweight On-path Network Assessment for Edge Orchestration' has been accepted at the 21st International Conference on emerging Networking EXperiments and Technologies 2025."
   link: '/pdf/CoNEXT_25_Poster___KUT.pdf'
   linkname: 'article 🔗'
   picture: 'img/news/kut-measurements.png'
 - title: "📄 Accepted Paper @ ACM CoNEXT ECCAI '25 Workshop "
   date:  '27/8/2025'
-  content: "Our paper 'Comparative Performance and Cost Analysis of Computer Vision in Edge-Cloud Continuum' has been accepted at the ACM CoNEXT Workshop Edge-Cloud Collaboration for AI (ECCAI '25)."
+  content: "The paper 'Comparative Performance and Cost Analysis of Computer Vision in Edge-Cloud Continuum' has been accepted at the ACM CoNEXT Workshop Edge-Cloud Collaboration for AI (ECCAI '25)."
   link: '/pdf/Comparative_Performance_and_Cost_Analysis_of_Computer_Vision_in_Edge-Cloud_Continuum.pdf'
   linkname: 'article 🔗'
   picture: 'img/news/eccai-2025.png'
 - title: '🎖️ Artifacts Reproduced @ Usenix ATC 2025'
   date:  '1/5/2025'
-  content: "Our paper, On-Demand Container Partitioning for Distributed ML, has been awarded the artifacts available, functional, and reproduced badges."
+  content: "The paper 'On-Demand Container Partitioning for Distributed ML' has been awarded the artifacts available, functional, and reproduced badges."
   link: 'https://github.com/2DFS'
   linkname: 'repository 🔗'
   picture: 'img/news/usenix-badges.png'
