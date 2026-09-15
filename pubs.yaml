@@ -1,3 +1,12 @@
+- title: 'Poster: Build Less, Pull Less, Restart Never: Fast Container Image Distribution and In-Place Updates'
+  category: 'publication'
+  author: Navidreza Asadi, Bohdan Garchu, Giovanni Bartolomeo, Jörg Ott, Wolfgang Kellerer
+  publication_date: 10/2026
+  journal_title: SOSP 2026 The 32nd Symposium on Operating Systems Principles
+  firstpage: '1'
+  lastpage: '2'
+  image: ./pdf/covers/Build_Less_Pull_Less,_Restart_Never_Fast_Container_Image Distribution_and_In-Place_Updates.png
+  pdf_url: ./pdf/Build_Less_Pull_Less,_Restart_Never_Fast_Container_Image Distribution_and_In-Place_Updates.pdf
 - title: 'Poster: KUT: Towards Lightweight On-path Network Assessment for Edge Orchestration'
   category: 'publication'
   author: Wei Geng, Oguz Kagan Altas, David Guzman, Giovanni Bartolomeo, Nitinder Mohan, Jörg Ott

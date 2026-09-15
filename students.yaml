@@ -1,4 +1,14 @@
 
+- title: 'Optimizing Model Distribution in Containerized Distributed Machine Learning Systems'
+  category: 'ma-thesis'
+  author: Bohdan Garchu
+  publication_date: 08/2026
+  journal_title: Master's thesis. Technical University Munich
+  firstpage: '1'
+  lastpage: '56'
+  image: ./pdf/covers/Optimizing_Model_Distribution_in_Containerized_Distributed_Machine_Learning_Systems.png
+  pdf_url: ./pdf/Optimizing_Model_Distribution_in_Containerized_Distributed_Machine_Learning_Systems.pdf
+  presentation: https://balancer.bbb.rbg.tum.de/playback/presentation/2.3/43029df94cc085c4fbc2063bc08c0549bab493cd-1785331638030
 - title: 'Evaluation of Live Migration Strategies at the Edge'
   category: 'ba-thesis'
   author: Ivo Raimondi
